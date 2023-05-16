@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const PostWidget = ({categories, slug}) => {
+const PostWidget: FC<any> = ({categories, slug}) => {
   return (
     <div>PostWidget</div>
   )

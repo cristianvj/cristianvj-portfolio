@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const FeaturedPosts = () => {
+const FeaturedPosts: FC<any> = () => {
   return (
     <div>FeaturedPosts</div>
   )
