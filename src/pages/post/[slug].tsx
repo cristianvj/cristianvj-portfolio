@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Categories, PostWidget } from '../../components';
+import { Categories, PostWidget, PostDetail } from '../../components';
 
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { PropsPostContent } from '../../interfaces';
@@ -11,7 +11,7 @@ const PostDetails: FC<PropsPostContent> = ({ post }) => (
   <div className="container mx-auto px-10 mb-8">
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
       <div className="col-span-1 lg:col-span-8">
-        
+        <PostDetail post={post} />
         <h1>{post.title}</h1>
         <p>{post.slug}</p>
       </div>
