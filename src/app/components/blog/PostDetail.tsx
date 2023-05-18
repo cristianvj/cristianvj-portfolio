@@ -1,11 +1,15 @@
 import React, { FC } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import moment from 'moment';
-import { PropsPostContent } from '../../interfaces';
-import { grpahCMSImageLoader } from '../../utils/utils';
+import { Post, PropsPostContent } from '../../../interfaces';
+import { grpahCMSImageLoader } from '../../../utils/utils';
 import Image from 'next/image';
 
-const PostDetail: FC<PropsPostContent> = ({ post }) => (
+interface props {
+  post: Post
+}
+
+const PostDetail: FC<props> = ({post}) => (
   <>
     <div className="bg-white shadow-lg rounded-lg lg:p-12 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md mb-6">
@@ -47,7 +51,7 @@ const PostDetail: FC<PropsPostContent> = ({ post }) => (
           </div>
         </div>
         <h1 className="mb-8 text-4xl font-semibold text-center">{post.title}</h1>
-        <RichText
+        {post?.content?.raw && <RichText
           content={post.content.raw}
           renderers={{
             h1: ({ children }) => <h1 className="font-bold mb-3 text-4xl">{children}</h1>,
@@ -62,7 +66,7 @@ const PostDetail: FC<PropsPostContent> = ({ post }) => (
             underline: ({ children }) => <u>{children}</u>,
             table: ({ children }) => <table className="table-auto text-xl">{children}</table>
           }}
-        />
+        />}
       </div>
     </div>
   </>

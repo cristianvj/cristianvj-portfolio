@@ -27,6 +27,7 @@ export interface Post {
   };
   categories: Category[];
   node?: any;
+  content?: any;
 };
 
 export interface PostContent extends Post {
