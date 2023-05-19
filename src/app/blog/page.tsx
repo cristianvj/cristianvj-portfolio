@@ -21,7 +21,6 @@ const Blog: NextPage = () => {
 
   return (
     <>
-      <Navbar/>
       <div className="container mx-auto px-5 mb-8">
         <FeaturedPosts />
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>

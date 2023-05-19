@@ -17,7 +17,7 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
     if(params.slug){
       getPost(params.slug).then((data) => setPost(data));
     };
-  }, []);
+  }, [params.slug]);
   
   if(!post) return null;
 
