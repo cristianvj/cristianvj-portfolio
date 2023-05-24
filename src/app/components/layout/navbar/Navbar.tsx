@@ -32,7 +32,7 @@ const Navbar = () => {
           <span className={`
             self-center 
             text-3xl 
-            font-semibold 
+            font-normal
             whitespace-nowrap
             text-orange-600
             title-shadow
