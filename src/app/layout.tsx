@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={nunito.className}>
         <ClientOnly>
           <Navbar />
-          <main className="pt-20 md:pt-16">
+          <main className="pt-[7rem] bg-white dark:bg-gray-800">
             {children}
           </main>
         </ClientOnly>
