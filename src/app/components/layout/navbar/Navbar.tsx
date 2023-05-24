@@ -117,7 +117,10 @@ const Navbar = () => {
               <Link 
                 href="/blog" 
                 className={`
-                  ${path === "/blog" && classes.navbarLi.active} 
+                  ${
+                    (path === "/blog" || path.split("/")[1] === "blog") 
+                      && classes.navbarLi.active
+                  } 
                   ${classes.navbarLi.link} 
                   ${darkMode === true && classes.navbarLi.linkDark}
                 `}
