@@ -31,10 +31,11 @@ const Navbar = () => {
           />
           <span className={`
             self-center 
-            text-2xl 
+            text-3xl 
             font-semibold 
             whitespace-nowrap
             text-orange-600
+            title-shadow
             ${pacifico.className}
           `}>
             Cristian VJ

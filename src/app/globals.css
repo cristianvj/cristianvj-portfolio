@@ -9,3 +9,7 @@ body,
 :root {
   height: 100%;
 }
+
+.title-shadow{
+  text-shadow: 0.2px 0.2px 1px white;
+}
