@@ -1,9 +1,9 @@
 export const classes = {
   navbarLi: {
-    link: "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0",
-    linkDark: "dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent",
-    active: "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 ",
-    activeDark: "dark:text-white md:dark:text-blue-500"
+    link: "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0",
+    linkDark: "dark:text-white md:dark:hover:text-orange-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent",
+    active: "block py-2 pl-3 pr-4 text-white bg-orange-600 rounded md:bg-transparent md:text-orange-600 md:p-0 ",
+    activeDark: "dark:text-white md:dark:text-orange-600"
   },
   navbarIcons: {
     dark: "dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700",

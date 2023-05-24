@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -15,6 +16,9 @@ const pacifico = Pacifico({
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [showResponsiveMenu, setShowresponsiveMenu] = useState(false);
+
+  const path = usePathname();
+  console.log(path)
 
   return (
     <nav 
@@ -99,8 +103,12 @@ const Navbar = () => {
             <li className='md:m-auto'>
               <Link 
                 href="/" 
-                className={`${classes.navbarLi.active} ${darkMode === true && classes.navbarLi.activeDark}`} 
-                aria-current="page"
+                className={`
+                  ${path === "/" && classes.navbarLi.active} 
+                  ${classes.navbarLi.link} 
+                  ${darkMode === true && classes.navbarLi.linkDark}
+                `}
+                onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
               >
                 Home
               </Link>
@@ -108,7 +116,12 @@ const Navbar = () => {
             <li className='md:m-auto'>
               <Link 
                 href="/blog" 
-                className={`${classes.navbarLi.link} ${darkMode === true && classes.navbarLi.linkDark}`}
+                className={`
+                  ${path === "/blog" && classes.navbarLi.active} 
+                  ${classes.navbarLi.link} 
+                  ${darkMode === true && classes.navbarLi.linkDark}
+                `}
+                onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
               >
                 Blog
               </Link>
@@ -116,7 +129,12 @@ const Navbar = () => {
             <li className='md:m-auto'>
               <Link 
                 href="/interview" 
-                className={`${classes.navbarLi.link} ${darkMode === true && classes.navbarLi.linkDark}`}
+                className={`
+                  ${path === "/interview" && classes.navbarLi.active} 
+                  ${classes.navbarLi.link} 
+                  ${darkMode === true && classes.navbarLi.linkDark}
+                `}
+                onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
               >
                 Interview Prep
               </Link>
@@ -129,6 +147,7 @@ const Navbar = () => {
               href="https://github.com/cristianvj" 
               data-tooltip-target="tooltip-github-2" 
               className={`${classes.navbarIcons.light} ${darkMode && classes.navbarIcons.dark}`}
+              onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
             >
               <svg className="w-5 h-5" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d={iconPaths.gitHub}></path></svg>
               <span className="sr-only">View on Github</span>
@@ -139,6 +158,7 @@ const Navbar = () => {
               href="https://www.youtube.com/channel/UCEkTnONRiFQPlPfLd0XEIaQ" 
               data-tooltip-target="tooltip-youtube" 
               className={`${classes.navbarIcons.light} ${darkMode && classes.navbarIcons.dark}`}
+              onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
             >
               <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d={iconPaths.youTube}></path></svg>
               <span className="sr-only">Flowbite YouTube</span>
@@ -149,6 +169,7 @@ const Navbar = () => {
               href="https://www.linkedin.com/in/cristianvj/" 
               data-tooltip-target="tooltip-linkedin" 
               className={`${classes.navbarIcons.light} ${darkMode && classes.navbarIcons.dark}`}
+              onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
             >
               <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d={iconPaths.linkedin}></path></svg>
               <span className="sr-only">Flowbite LinkedIn</span>
