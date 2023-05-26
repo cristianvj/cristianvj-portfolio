@@ -1,14 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { PostCard, Categories, PostWidget, Navbar } from '../components';
+import { PostCard, Categories, PostWidget, FeaturedPosts } from '../../components';
 
 import type { NextPage } from 'next';
 
 import { getPosts } from '../../services';
-
 import { Post } from '../../interfaces';
-import { FeaturedPosts } from '../../sections';
 
 const Blog: NextPage = () => {
 
@@ -20,19 +18,22 @@ const Blog: NextPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto text-white">
-      <FeaturedPosts />
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-        <div className='lg:col-span-8 col-span-2'>
+    <div className="flex flex-col gap-4 container mx-auto text-white">
+      <FeaturedPosts post={posts[0]} />
+        <div className='
+          flex
+          flex-wrap
+          justify-between
+          gap-4
+        '>
           { posts.map((post, id) => <PostCard post={post.node} key={id} />) }
         </div>
-        <div className="lg:col-span-4 col-span-1">
+        {/* <div className="lg:col-span-4 col-span-1">
           <div className='lg:sticky relative top-8'>
             <PostWidget categories={undefined} slug={undefined} />
             <Categories />
           </div>
-        </div>
-      </div>
+        </div> */}
     </div>
 )}
 

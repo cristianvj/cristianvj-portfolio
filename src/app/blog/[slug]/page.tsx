@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react';
-import { Categories, PostWidget, PostDetail } from '../../components';
+import { Categories, PostWidget, PostDetail } from '../../../components';
 
 import { Post } from '../../../interfaces';
 import { getPostDetails } from '../../../services';

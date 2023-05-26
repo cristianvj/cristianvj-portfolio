@@ -1,4 +1,4 @@
-import { ClientOnly, Navbar } from './components'
+import { ClientOnly, Navbar } from '../components'
 import './globals.css'
 import { Nunito } from 'next/font/google'
 
@@ -16,10 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} bg-white dark:bg-gray-900`}>
+      <body className={`
+        ${nunito.className} 
+        bg-white 
+        dark:bg-gray-900
+      `}>
         <ClientOnly>
           <Navbar />
-          <main className="pt-[7rem]">
+          <main className="pt-[7rem] mx-3">
             {children}
           </main>
         </ClientOnly>

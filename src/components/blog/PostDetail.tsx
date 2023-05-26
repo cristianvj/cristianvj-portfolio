@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import moment from 'moment';
-import { Post, PropsPostContent } from '../../../interfaces';
-import { grpahCMSImageLoader } from '../../../utils/utils';
+import { Post, PropsPostContent } from '../../interfaces';
+import { grpahCMSImageLoader } from '../../utils/utils';
 import Image from 'next/image';
 
 interface props {
