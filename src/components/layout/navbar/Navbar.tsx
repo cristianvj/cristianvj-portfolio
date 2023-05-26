@@ -24,7 +24,7 @@ const Navbar = () => {
   const [logged] = useState(false);
 
   const pages = [
-    { href: "/", name:"Home"}, 
+    {href: "/", name:"Home"}, 
     {href: "/blog", name: "Blog"},
     {href: "/interview", name: "Interview"}
   ];
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`
-        fixed z-10 w-full bg-white
+        fixed z-[100] w-full bg-white
         border-b border-b-gray-700
         ${darkMode === true && "dark:bg-gray-800 dark:border-b-gray-600"}
       `}
