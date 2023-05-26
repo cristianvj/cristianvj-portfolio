@@ -20,7 +20,7 @@ const Blog: NextPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto text-white">
       <FeaturedPosts />
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
         <div className='lg:col-span-8 col-span-2'>

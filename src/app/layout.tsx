@@ -16,10 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={`${nunito.className} bg-white dark:bg-gray-900`}>
         <ClientOnly>
           <Navbar />
-          <main className="pt-[7rem] bg-white dark:bg-gray-800">
+          <main className="pt-[7rem]">
             {children}
           </main>
         </ClientOnly>
