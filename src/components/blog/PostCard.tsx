@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { FC } from 'react'
 
 const PostCard: FC<any> = ({ post }) => (
-  <div className="w-full md:max-w-[30%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div className="w-full md:max-w-[48%] lg:max-w-[30%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     {
       post?.author?.photo?.url &&
       <Image

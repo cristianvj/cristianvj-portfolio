@@ -4,7 +4,7 @@ export { default as PostWidget } from './blog/PostWidget';
 export { default as Navbar } from './layout/navbar/Navbar';
 export { default as ClientOnly } from './ClientOnly';
 export { default as PostDetail } from './blog/PostDetail';
-export { default as FeaturedPosts } from './blog/FeaturedPosts';
+export { default as Jumbotron } from './blog/Jumbotron';
 // export { default as Header } from './blog/Header';
 // export { default as Layout } from './blog/Layout';
 // export { default as Author } from './blog/Author';

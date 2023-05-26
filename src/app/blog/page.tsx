@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { PostCard, Categories, PostWidget, FeaturedPosts } from '../../components';
+import { PostCard, Categories, PostWidget, Jumbotron } from '../../components';
 
 import type { NextPage } from 'next';
 
@@ -19,7 +19,7 @@ const Blog: NextPage = () => {
 
   return (
     <div className="flex flex-col gap-4 container mx-auto text-white">
-      <FeaturedPosts post={posts[0]} />
+      <Jumbotron />
       <div className='
         flex
         flex-wrap
