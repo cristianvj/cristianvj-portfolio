@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Main } from '@/components';
 
 const InterviewQuestions = () => {
   return (
-    <div className='container mx-auto bg-red-400'>Interview questions</div>
-  )
-}
+    <Main>
+      <div className='container mx-auto bg-red-400'>Front end road map</div>
+    </Main>
+  );
+};
 
-export default InterviewQuestions
+export default InterviewQuestions;

@@ -37,9 +37,15 @@ const Navbar = () => {
   return (
     <nav 
       className={`
-        fixed z-[100] w-full bg-white
-        border-b border-b-gray-700
-        ${darkMode === true && "dark:bg-gray-800 dark:border-b-gray-600"}
+        fixed z-[100] 
+        w-full 
+        bg-white
+        border-b 
+        border-b-gray-300
+        ${darkMode === true && `
+          dark:bg-gray-800 
+          dark:border-b-gray-600
+        `}
       `}
     >
       <div className="flex flex-wrap lg:flex-nowrap items-center justify-between lg:container mx-auto py-4 px-10">

@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react';
-import { Categories, PostWidget, PostDetail } from '../../../components';
+import { Categories, PostWidget, PostDetail, Main } from '../../../components';
 
 import { Post } from '../../../interfaces';
 import { getPostDetails } from '../../../services';
@@ -22,24 +22,24 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
   if(!post) return null;
 
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="col-span-1 lg:col-span-8">
-          <PostDetail post={post} />
-          <h1>{post.title}</h1>
-          <p>{post.slug}</p>
-        </div>
-        <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky top-8">
-            {post?.categories?.length && <PostWidget 
-              slug={post.slug} 
-              categories={post.categories.map(category => category.slug)} 
-            />}
-            <Categories/>
+    <Main>
+        <div className="container mx-auto">
+          <div className="col-span-1 lg:col-span-8">
+            <PostDetail post={post} />
+            <h1>{post.title}</h1>
+            <p>{post.slug}</p>
+          </div>
+          <div className="col-span-1 lg:col-span-4">
+            <div className="relative lg:sticky top-8">
+              {post?.categories?.length && <PostWidget 
+                slug={post.slug} 
+                categories={post.categories.map(category => category.slug)} 
+              />}
+              <Categories/>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+    </Main>
   )
 };
 
