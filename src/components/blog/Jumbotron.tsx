@@ -6,7 +6,7 @@ import SotialNetworkButtons from '../layout/navbar/SotialNetworkButtons';
 
 const Jumbotron: FC = () => {
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:flex-nowrap justify-between items-start gap-6 mb-3">
+    <div className="w-full flex flex-col lg:flex-row lg:flex-nowrap justify-between items-center gap-6 mb-3">
       {
         // Welcome
       }
@@ -76,7 +76,7 @@ const Jumbotron: FC = () => {
                         </h2>
                         <form className="mt-8 space-y-4" action="#">
                             <div>
-                                <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Déjame tu email, cero spam</label>
+                                <label htmlFor="email" className="block mb-2 text-md font-medium text-gray-900 dark:text-white">Déjame tu email, cero spam</label>
                                 <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500" placeholder="name@company.com" required />
                             </div>
                             <button type="submit" className="w-full px-5 py-3 text-base font-medium text-center text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 sm:w-auto dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">Suscribete</button>

@@ -1,13 +1,15 @@
-import { ClientOnly, Navbar } from '../components'
-import './globals.css'
-import { Nunito } from 'next/font/google'
+import { DarkContextProvider } from '../context/darkMode.context';
+import { ClientOnly, Navbar } from '../components';
 
-const nunito = Nunito({ subsets: ['latin'] })
+import './globals.css';
+import { Nunito } from 'next/font/google';
+
+const nunito = Nunito({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Cristianvj',
   description: 'Cristian Villota - Portfolio',
-}
+};
 
 export default function RootLayout({
   children,
@@ -16,18 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`
-        ${nunito.className} 
-        bg-white 
-        dark:bg-gray-900
-      `}>
-        <ClientOnly>
-          <Navbar />
-          <main className="pt-[7rem] mx-3">
+      <DarkContextProvider>
+        <body className={`
+          ${nunito.className}
+        `}>
+          <ClientOnly>
+            <Navbar />
+
             {children}
-          </main>
-        </ClientOnly>
-      </body>
+
+          </ClientOnly>
+        </body>
+      </DarkContextProvider>
     </html>
-  )
-}
+  );
+};

@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 import { classes, iconPaths } from '@/utils/consts';
 
 interface props {
-  darkMode: boolean;
+  darkMode: boolean | undefined;
   showResponsiveMenu?: boolean;
   setShowresponsiveMenu?: (showResponsiveMenu: boolean) => any;
 }

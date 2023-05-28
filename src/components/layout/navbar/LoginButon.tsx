@@ -4,7 +4,7 @@ import React, { FC, useState } from 'react'
 
 interface props {
   logged: boolean;
-  darkMode: boolean;
+  darkMode: boolean | undefined;
 }
 
 const LoginButon: FC<props> = ({ logged, darkMode }) => {
@@ -30,7 +30,7 @@ const LoginButon: FC<props> = ({ logged, darkMode }) => {
             `} 
             onClick={()=>setShowLogin(!showLogin)}
           >
-            <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+            <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
           </div>
         )
       }
@@ -38,7 +38,7 @@ const LoginButon: FC<props> = ({ logged, darkMode }) => {
 
       {
         showLogin && (
-          <div id="userDropdown" className={`z-10 absolute mt-[7rem] lg:mt-12 lg:ml-[290px] bg-white divide-y divide-gray-100 rounded-lg shadow mw-44 text-center  ${darkMode && "dark:bg-gray-700 dark:divide-gray-600"}`}>
+          <div id="userDropdown" className={`z-10 absolute mt-[3rem] ml-[16rem] lg:mt-12 lg:ml-[290px] bg-white divide-y divide-gray-100 rounded-lg shadow text-center  ${darkMode && "dark:bg-gray-700 dark:divide-gray-600"}`}>
             {/* <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
               <div>Bonnie Green</div>
               <div className="font-medium truncate">name@flowbite.com</div>

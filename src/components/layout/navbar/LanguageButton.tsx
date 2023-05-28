@@ -3,7 +3,7 @@ import React, { FC, useState } from 'react'
 import { classes } from '@/utils/consts';
 
 interface props {
-  darkMode: boolean;
+  darkMode: boolean | undefined;
   showLanguages: boolean;
   setShowLanguages: (showLanguages: boolean) => void;
 }
@@ -51,7 +51,7 @@ const LanguageButton: FC<props> = ({darkMode, showLanguages, setShowLanguages}) 
           <path fill="#c7002b" d="M1 59a4 4 0 0 0 4 4h54a4 4 0 0 0 4-4V43H1Z" />
           <path fill="#b51135" d="M59 59H5a4 4 0 0 1-4-4v4a4 4 0 0 0 4 4h54a4 4 0 0 0 4-4v-4a4 4 0 0 1-4 4Z" />
           <path fill="#ea5172" d="M59 1H5a4 4 0 0 0-4 4v4a4 4 0 0 1 4-4h54a4 4 0 0 1 4 4V5a4 4 0 0 0-4-4Z" />
-          <path fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" d="M24 29v11M8 29v11" />
+          <path fill="none" stroke="#000" strokeLinejoin="round" strokeWidth="2" d="M24 29v11M8 29v11" />
           <path fill="#e21743" d="M19 24a1.959 1.959 0 0 1 2 2 1.8 1.8 0 0 1-.988 1.744A1.935 1.935 0 0 0 19 29.482V30h-6v-.518a1.935 1.935 0 0 0-1.012-1.738A1.8 1.8 0 0 1 11 26a1.959 1.959 0 0 1 2-2Z" />
           <path fill="#eef2fa" d="M21 30v5h-5v-5h5z" />
           <path fill="#e21743" d="M16 35v5c-2.76 0-5-.69-5-4v-1zm5 0v1c0 3.31-2.24 4-5 4v-5zM16 30v5h-5v-5h5z" />

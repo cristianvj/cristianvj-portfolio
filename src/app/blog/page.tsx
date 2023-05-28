@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { PostCard, Categories, PostWidget, Jumbotron } from '../../components';
+import { PostCard, Jumbotron, Main } from '../../components';
 
 import type { NextPage } from 'next';
 
@@ -18,23 +18,19 @@ const Blog: NextPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 container mx-auto text-white">
-      <Jumbotron />
-      <div className='
-        flex
-        flex-wrap
-        justify-between
-        gap-4
-      '>
-        { posts.map((post, id) => <PostCard post={post.node} key={id} />) }
-      </div>
-      {/* <div className="lg:col-span-4 col-span-1">
-        <div className='lg:sticky relative top-8'>
-          <PostWidget categories={undefined} slug={undefined} />
-          <Categories />
+    <Main>
+      <div className="flex flex-col gap-4 container mx-auto text-white">
+        <Jumbotron />
+        <div className='
+          flex
+          flex-wrap
+          justify-between
+          gap-5
+        '>
+          { posts.map((post, id) => <PostCard post={post.node} key={id} />) }
         </div>
-      </div> */}
-    </div>
-)}
+      </div>
+    </Main>
+)};
 
 export default Blog;

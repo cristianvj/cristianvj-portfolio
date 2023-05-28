@@ -12,16 +12,19 @@ import DarkModeButton from './DarkModeButton';
 import MenuPages from './MenuPages';
 import LoginButon from './LoginButon';
 
+import { useDarkContext } from '../../../context/darkMode.context';
+
 const pacifico = Pacifico({
   weight: '400',
   subsets: ['latin'],
 });
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(true);
   const [showResponsiveMenu, setShowresponsiveMenu] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [logged] = useState(false);
+
+  const { darkMode } = useDarkContext() || {};
 
   const pages = [
     {href: "/", name:"Home"}, 
@@ -131,7 +134,7 @@ const Navbar = () => {
               showLanguages={showLanguages} 
               setShowLanguages={setShowLanguages} 
             />
-            <DarkModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
+            <DarkModeButton />
             <LoginButon logged={logged} darkMode={darkMode} />
 
           </div>

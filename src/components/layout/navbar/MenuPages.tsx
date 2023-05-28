@@ -5,12 +5,13 @@ import React, { FC } from 'react'
 interface props {
   pages: {name: string; href: string}[];
   path: string;
-  darkMode: boolean;
+  darkMode: boolean | undefined;
   showResponsiveMenu: boolean;
   setShowresponsiveMenu: (showResponsiveMenu: boolean) => void;
 }
 
 const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowresponsiveMenu, showResponsiveMenu }) => {
+
   return (
     <ul
       className={`
@@ -38,6 +39,7 @@ const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowresponsiveMenu, s
               href={page.href} 
               className={`
                 ${path === page.href && classes.navbarLi.active} 
+                ${(page.href === "/blog" && path.includes('/blog')) && classes.navbarLi.active}
                 ${classes.navbarLi.link} 
                 ${darkMode === true && classes.navbarLi.linkDark}
               `}
