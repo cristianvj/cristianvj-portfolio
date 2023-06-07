@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react';
-import { Categories, PostWidget, PostDetail, Main } from '../../../components';
+import { Categories, PostWidget, PostDetail, PostHeader, Main } from '../../../components';
 
 import { Post } from '../../../interfaces';
 import { getPostDetails } from '../../../services';
@@ -24,13 +24,13 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
   return (
     <Main>
         <div className="container mx-auto">
-          <div className="">
-            <PostDetail post={post} />
-            <h1>{post.title}</h1>
-            <p>{post.slug}</p>
-          </div>
-          <div className="col-span-1 lg:col-span-4">
-            <div className="relative lg:sticky top-8">
+          <PostHeader post={post} />
+
+          <div className="flex flex-wrap my-3 gap-2">
+            <div className="md:w-[75%]">
+              <PostDetail post={post} />
+            </div>
+            <div className="md:w-[23%]">
               {post?.categories?.length && <PostWidget 
                 slug={post.slug} 
                 categories={post.categories.map(category => category.slug)} 
@@ -38,6 +38,7 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
               <Categories/>
             </div>
           </div>
+          
         </div>
     </Main>
   )
