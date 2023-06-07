@@ -30,11 +30,14 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
             <div className="md:w-[75%]">
               <PostDetail post={post} />
             </div>
-            <div className="md:w-[23%]">
-              {post?.categories?.length && <PostWidget 
-                slug={post.slug} 
-                categories={post.categories.map(category => category.slug)} 
-              />}
+            <div className="flex flex-col gap-3 md:w-[23%]">
+              {
+                post?.categories?.length && 
+                  <PostWidget 
+                    slug={post.slug} 
+                    categories={post.categories.map(category => category.slug)} 
+                  />
+              }
               <Categories/>
             </div>
           </div>

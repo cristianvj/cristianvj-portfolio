@@ -1,9 +1,6 @@
 import React, { FC } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import moment from 'moment';
 import { Post } from '../../interfaces';
-import { grpahCMSImageLoader } from '../../utils/utils';
-import Image from 'next/image';
 import { useDarkContext } from '@/context/darkMode.context';
 
 interface props {
@@ -11,7 +8,6 @@ interface props {
 }
 
 const PostDetail: FC<props> = ({post}) => {
-  console.log(post)
 
   const { darkMode } = useDarkContext() || {};
 
@@ -30,7 +26,8 @@ const PostDetail: FC<props> = ({post}) => {
             bold: ({ children }) => <b>{children}</b>,
             italic: ({ children }) => <em>{children}</em>,
             underline: ({ children }) => <u>{children}</u>,
-            table: ({ children }) => <table className={`table-auto text-lg`}>{children}</table>
+            table: ({ children }) => <table className={`table-auto text-lg`}>{children}</table>,
+            code: ({ children }) => <code className={`text-gray-800`}>{children}</code>
           }}
         />}
     </div>
