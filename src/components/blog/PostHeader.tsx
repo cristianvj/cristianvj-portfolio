@@ -46,6 +46,7 @@ const PostHeader: FC<props> = ({post}) => {
           </div>
           <p className={`
             text-justify
+            text-lg
             ${darkMode ? "text-gray-200" : "text-gray-800"}
           `}>{post.excerpt}</p>
           <div className={`
@@ -74,12 +75,12 @@ const PostHeader: FC<props> = ({post}) => {
               <p className={`
                 inline 
                 align-middle
-                text-md
+                text-lg
                 font-semibold
                 ${darkMode ? "text-gray-200" : "text-gray-800"}
               `}>{post?.author?.name || ""}</p>
               <p className={`
-                text-justify text-sm
+                text-justify text-md
                 ${darkMode ? "text-gray-300" : "text-gray-800"}
               `}>{post?.author?.bio}</p>
             </div>

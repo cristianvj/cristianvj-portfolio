@@ -24,13 +24,13 @@ const PostDetail: FC<props> = ({post}) => {
             h2: ({ children }) => <h2 className={`text-3xl font-semibold mb-4`}>{children}</h2>,
             h3: ({ children }) => <h3 className={`font-semibold mb-3 text-2xl`}>{children}</h3>,
             h4: ({ children }) => <h4 className={`text-xl font-semibold mb-4`}>{children}</h4>,
-            p: ({ children }) => <p className={`mb-4 text-md text-justify ${darkMode && "dark:text-gray-300"}`}>{children}</p>,
-            ul: ({ children }) => <ul className={`list-disc ml-5 mb-6 text-md text-justify ${darkMode && "dark:text-gray-300"}`}>{children}</ul>,
-            ol: ({ children }) => <ol className={`list-decimal ml-5 mb-8 text-md text-justify`}>{children}</ol>,
+            p: ({ children }) => <p className={`mb-4 text-lg text-justify ${darkMode && "dark:text-gray-300"}`}>{children}</p>,
+            ul: ({ children }) => <ul className={`list-disc ml-5 mb-6 text-lg text-justify ${darkMode && "dark:text-gray-300"}`}>{children}</ul>,
+            ol: ({ children }) => <ol className={`list-decimal ml-5 mb-8 text-lg text-justify`}>{children}</ol>,
             bold: ({ children }) => <b>{children}</b>,
             italic: ({ children }) => <em>{children}</em>,
             underline: ({ children }) => <u>{children}</u>,
-            table: ({ children }) => <table className={`table-auto text-md`}>{children}</table>
+            table: ({ children }) => <table className={`table-auto text-lg`}>{children}</table>
           }}
         />}
     </div>
