@@ -13,7 +13,10 @@ const Main: FC<props> = ( { children } ) => {
 
   return (
     <main className={`
-      pt-[7rem] w-full px-4 
+      pt-[7rem] 
+      w-full 
+      px-4
+      min-h-screen 
       bg-white 
       ${darkMode && darkMode && "dark:bg-gray-900"}`}
     >

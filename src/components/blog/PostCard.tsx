@@ -10,7 +10,7 @@ const PostCard: FC<any> = ({ post }) => {
 
   return (
     <div className={`
-      w-full md:max-w-[48%] lg:max-w-[30%] bg-gray-100 rounded-lg shadow  border-gray-700
+      w-full md:max-w-[48%] lg:max-w-[30%] bg-gray-100 rounded-lg shadow-xl  border-gray-700
       ${darkMode && "dark:bg-gray-800 dark:border-gray-700"}`}>
       {
         post?.author?.photo?.url &&

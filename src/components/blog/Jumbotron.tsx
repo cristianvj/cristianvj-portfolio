@@ -18,7 +18,7 @@ const Jumbotron: FC = () => {
         // Welcome
       }
       <div className={`
-        w-full lg:max-w-[50%] bg-white border-gray-300 rounded-lg shadow 
+        w-full lg:max-w-[50%] bg-white border-gray-300 rounded-lg shadow-xl 
         ${darkMode && "dark:bg-gray-800 dark:border-gray-700"}`}>
         
         <picture>
@@ -75,7 +75,7 @@ const Jumbotron: FC = () => {
           //About author
         }
         <div className={`
-          w-full rounded-lg bg-gray-100 p-4
+          w-full rounded-lg bg-gray-100 p-4 shadow-xl
           ${darkMode && "bg-gray-800"}
         `}>
 

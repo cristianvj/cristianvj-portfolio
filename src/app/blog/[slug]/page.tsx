@@ -24,7 +24,7 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
   return (
     <Main>
         <div className="container mx-auto">
-          <div className="col-span-1 lg:col-span-8">
+          <div className="">
             <PostDetail post={post} />
             <h1>{post.title}</h1>
             <p>{post.slug}</p>
