@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from "react";
 type darkModeType = {
   darkMode: boolean;
   setDarkMode: (d: boolean) => void;
-}
+};
 
 const DarkContext = createContext<darkModeType | null>(null)
 

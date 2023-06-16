@@ -1,7 +1,15 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react';
-import { Categories, PostWidget, PostDetail, PostHeader, Main } from '../../../components';
+import { 
+  Categories, 
+  PostWidget, 
+  PostDetail, 
+  PostHeader, 
+  Main, 
+  Comments,
+  CommentsForm
+} from '../../../components';
 
 import { Post } from '../../../interfaces';
 import { getPostDetails } from '../../../services';
@@ -29,6 +37,8 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
           <div className="flex flex-wrap my-3 gap-2">
             <div className="md:w-[75%]">
               <PostDetail post={post} />
+              <Comments slug={post.slug} />
+              <CommentsForm slug={post.slug} />
             </div>
             <div className="flex flex-col gap-3 md:w-[23%]">
               {

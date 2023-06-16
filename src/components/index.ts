@@ -5,6 +5,8 @@ export { default as PostDetail } from './blog/PostDetail';
 export { default as PostHeader } from './blog/PostHeader';
 export { default as Jumbotron } from './blog/Jumbotron';
 export { default as Posts } from './blog/Posts';
+export { default as Comments } from './blog/Comments';
+export { default as CommentsForm } from './blog/CommentsForm';
 
 export { default as Navbar } from './layout/navbar/Navbar';
 export { default as Main } from './layout/Main';

@@ -208,15 +208,21 @@ export const getFeaturedPosts = async () => {
 };
 
 export const submitComment = async (obj: Comment) => {
-  const result = await fetch('/api/comments', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(obj),
-  });
-
-  return result.json();
+  try {
+    const result = await fetch('/api/comments', {
+      method: 'POST',
+      body: JSON.stringify(obj),
+    });
+    if (!result.ok) {
+      console.log("respuesta con error")
+    } else {
+      return result.json();
+    }
+    
+  } catch (error) {
+    console.log("error en submitComment: ", error);
+  }
+  
 };
 
 export const getComments = async (slug: string) => {
