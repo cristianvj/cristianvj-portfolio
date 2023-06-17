@@ -15,3 +15,5 @@ export { default as Main } from './layout/Main';
 export { default as ClientOnly } from './ClientOnly';
 
 export { default as HeroCanvas } from './home/HeroCanvas';
+export { default as HeroSection } from './home/HeroSection';
+export { default as Me } from './home/Me';
