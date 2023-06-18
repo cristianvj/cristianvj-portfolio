@@ -7,7 +7,7 @@ export default function Home() {
       <Main>
         <section className={`relative w-full h-[calc(100vh_-_112px)] mx-auto flex`}>
           <div className="w-full md:w-[50%]">
-            <h1 className='text-orange-600 text-2xl'>Hello, I'm Cristian welcome to my portfolio</h1>
+            <h1 className='text-orange-600 text-2xl'>Hello, I&apos;m Cristian welcome to my portfolio</h1>
             <Link className="text-white" href="/blog">Ir al blog</Link>
           </div>
           <div className="w-full md:w-[50%]">

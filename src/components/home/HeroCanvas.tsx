@@ -1,8 +1,7 @@
 'use client';
 
-import * as THREE from 'three'
-import React, { Suspense, useRef, useState } from 'react'
-import { Canvas, useFrame, ThreeElements } from '@react-three/fiber'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
 import Me from './Me';
 import { OrbitControls, Preload } from '@react-three/drei';
 
