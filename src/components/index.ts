@@ -1,5 +1,4 @@
 export { default as PostCard } from './blog/PostCard';
-import HeroCanvas from './home/HeroCanvas';
 export { default as Categories } from './blog/Categories';
 export { default as PostWidget } from './blog/PostWidget';
 export { default as PostDetail } from './blog/PostDetail';
@@ -17,3 +16,5 @@ export { default as ClientOnly } from './ClientOnly';
 export { default as HeroCanvas } from './home/HeroCanvas';
 export { default as HeroSection } from './home/HeroSection';
 export { default as Me } from './home/Me';
+export { default as CanvasLoader } from './home/CanvasLoader';
+export { default as Contact } from './home/Contact';

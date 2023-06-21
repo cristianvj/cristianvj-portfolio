@@ -4,6 +4,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Me from './Me';
 import { OrbitControls, Preload } from '@react-three/drei';
+import CanvasLoader from './CanvasLoader';
 
 
 const HeroCanvas = () => {
@@ -15,10 +16,10 @@ const HeroCanvas = () => {
       camera={{ position: [0, 1, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<CanvasLoader/>}>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <Me position={[0, -.3, 0]}/>
+        <Me position={[0, -.8, 0]}/>
         <OrbitControls
           enableZoom={true}
         />
