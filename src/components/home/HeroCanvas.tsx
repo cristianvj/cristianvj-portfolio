@@ -21,7 +21,7 @@ const HeroCanvas = () => {
         <pointLight position={[10, 10, 10]} />
         <Me position={[0, -.8, 0]}/>
         <OrbitControls
-          enableZoom={true}
+          enableZoom={false}
         />
       </Suspense>
       <Preload all />

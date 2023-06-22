@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import EarthCanvas from './EarthCanvas';
 
-const Contact = () => {
+const ContactSection = () => {
   
   const formRef = useRef(null);
   
@@ -48,9 +48,9 @@ const Contact = () => {
   };
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
+    <section className='xl:mt-12 xl:flex-row flex-col-reverse justify-evenly flex gap-10 overflow-hidden'>
       <div
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-black-100 p-8 rounded-2xl w-full xl:w-[50%]'
       >
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider text-white">Get in touch</p>
         <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h3>
@@ -104,12 +104,12 @@ const Contact = () => {
       </div>
 
       <div
-        className='xl:h-auto md:h-[550px] h-[350px] w-full'
+        className='xl:h-auto md:h-[550px] h-[350px] w-full xl:w-[50%]'
       >
         <EarthCanvas />
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Contact;
+export default ContactSection;

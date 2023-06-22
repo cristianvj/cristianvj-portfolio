@@ -17,4 +17,4 @@ export { default as HeroCanvas } from './home/HeroCanvas';
 export { default as HeroSection } from './home/HeroSection';
 export { default as Me } from './home/Me';
 export { default as CanvasLoader } from './home/CanvasLoader';
-export { default as Contact } from './home/Contact';
+export { default as ContactSection } from './home/ContactSection';
