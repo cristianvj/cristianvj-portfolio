@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 import SotialNetworkButtons from '../layout/navbar/SotialNetworkButtons';
+import Categories from './Categories';
 
 import { grpahCMSImageLoader } from '@/utils/utils';
 import { useDarkContext } from '@/context/darkMode.context';
@@ -13,17 +13,17 @@ const Jumbotron: FC = () => {
   const { darkMode } = useDarkContext() || {};
 
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:flex-nowrap justify-between items-center gap-6 mb-3">
+    <div className="w-full flex flex-col lg:flex-row lg:flex-nowrap justify-between items-start gap-6 mb-3">
       {
         // Welcome
       }
       <div className={`
-        w-full lg:max-w-[50%] bg-white border-gray-300 rounded-lg shadow-xl 
+        w-full lg:max-w-[60%] bg-white border-gray-300 rounded-lg shadow-xl 
         ${darkMode && "dark:bg-gray-800 dark:border-gray-700"}`}>
         
         <picture>
-          <div className='z-10 bg-black/30 absolute p-2 mt-[1rem] ml-5 max-w-[320px] rounded-lg title-card-image'>
-            <p className='text-white text-left text-2xl md:text-4xl font-bold'>Prepárate para tus entrevistas de <span className="text-orange-600">React Dev.</span></p>
+          <div className='z-10 bg-black/30 absolute p-3 mt-[1rem] ml-5 max-w-[360px] rounded-lg title-card-image'>
+            <p className='text-white text-left text-2xl md:text-4xl font-bold'>Welcome to my blog <span className="text-orange-600">React Dev.</span></p>
           </div>
           <Image
             unoptimized
@@ -37,28 +37,33 @@ const Jumbotron: FC = () => {
         </picture>
 
         <div className={`
-          p-5 bg-gray-100 text-gray-900
+          p-5 bg-gray-100 text-gray-900 rounded-lg
           ${darkMode && "bg-gray-800 text-white"}
         `}>
             <div>
                 <h5 className={`
                   mb-2 text-2xl font-bold tracking-tight text-gray-800 
                   ${darkMode && "dark:text-white"}
-                `}>Bienvenido a mi blog</h5>
+                `}>Welcome!</h5>
             </div>
             <p className={`
               mb-3 font-normal 
               text-gray-700
               text-justify
-              ${darkMode && "dark:text-gray-400"}`}>
-              Aqui encontrarás un {` `} 
-              <Link href={`/interview`} className={`
-                  text-orange-600 hover:underline
-                {darkMode && "dark:text-gray-200 dark:hover:underline"}
-              `}>
-                banco de preguntas y respuestas frecuentes
-              </Link>
-              , así como recursos muy útiles para prepararte para tus entrevistas de trabajo como react developer y resolver ciertos bugs que día a día nos enfrentamos como desarrolladores web React, Mobile y 3D.
+              ${darkMode && "dark:text-gray-300"}`}>
+              Here you&apos;ll find a treasure trove of knowledge and resources dedicated to web programming, 3D web interfaces, and all the subjects that have helped me prepare for interview questions and excel in the world of software development.
+              <br/>
+              <br/>
+              Whether you&apos;re a seasoned developer looking for clever tricks and industry insights or a beginner eager to dive into the world of web development, this blog is here to guide you. Expect to find helpful tips, coding techniques, and recommended resources that will sharpen your skills and empower you on your programming journey.
+              <br/>
+              <br/>
+              Join me as we explore the fascinating world of software development together. Let&apos;s unlock the secrets of web programming, delve into the realm of 3D web interfaces, and equip ourselves with the knowledge to conquer any interview challenge that comes our way.
+              <br/>
+              <br/>
+              Get ready to expand your programming prowess and embark on an exciting adventure of learning and growth. Stay tuned for regular updates and feel free to reach out with any questions or suggestions.
+              <br/>
+              <br/>
+              Happy coding!
             </p>
             <p className={`
               text-bold mb-3 font-normal text-gray-500 
@@ -70,7 +75,7 @@ const Jumbotron: FC = () => {
       {
         // Author and newsletter
       }
-      <div className='w-full lg:max-w-[50%] flex flex-col items-start gap-6'>
+      <div className='w-full lg:max-w-[40%] flex flex-col items-start gap-6'>
         {
           //About author
         }
@@ -131,8 +136,10 @@ const Jumbotron: FC = () => {
           </form>
         </section>
 
+      <Categories/>
+      
       </div>
-
+      
     </div>
   )
 };

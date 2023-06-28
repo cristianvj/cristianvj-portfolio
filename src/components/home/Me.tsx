@@ -103,10 +103,8 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
   useFrame((state, delta) => group?.current?.rotation?.x &&   ( group.current.rotation.x += delta))
 
   useEffect(() => {
-    console.log(actions)
     if (actions && actions["Armature.001|mixamo.com|Layer0.002"])
       actions["Armature.001|mixamo.com|Layer0.002"].play();
-    console.log(props.rotation);
   });
 
   

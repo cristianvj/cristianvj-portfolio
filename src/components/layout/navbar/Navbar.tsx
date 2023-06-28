@@ -29,8 +29,8 @@ const Navbar = () => {
   const pages = [
     {href: "/", name:"Home"}, 
     {href: "/blog", name: "Blog"},
-    {href: "/interview", name: "Interview"}
   ];
+  //{href: "/interview", name: "Interview"}
 
   const path = usePathname();
 
@@ -135,13 +135,13 @@ const Navbar = () => {
               setShowresponsiveMenu={setShowresponsiveMenu} 
               showResponsiveMenu={showResponsiveMenu}
             />
-            <LanguageButton 
+            {/* <LanguageButton 
               darkMode={darkMode} 
               showLanguages={showLanguages} 
               setShowLanguages={setShowLanguages} 
-            />
+            /> */}
             <DarkModeButton />
-            <LoginButon logged={logged} darkMode={darkMode} />
+           {/*  <LoginButon logged={logged} darkMode={darkMode} /> */}
 
           </div>
         </div>
