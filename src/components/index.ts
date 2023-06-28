@@ -18,3 +18,4 @@ export { default as HeroSection } from './home/HeroSection';
 export { default as Me } from './home/Me';
 export { default as CanvasLoader } from './home/CanvasLoader';
 export { default as ContactSection } from './home/ContactSection';
+export { default as About } from './home/About';

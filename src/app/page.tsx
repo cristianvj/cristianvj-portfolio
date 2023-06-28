@@ -1,11 +1,11 @@
-import { ContactSection, HeroSection, Main } from '../components'
-import HeroCanvas from './../components/home/HeroCanvas';
+import { About, ContactSection, HeroSection, Main } from '../components'
 
 export default function Home() {
   return (
       <Main>
-        <HeroSection/>
-        <ContactSection/>
+        <HeroSection />
+        <About />
+        <ContactSection />
       </Main>
   )
 }

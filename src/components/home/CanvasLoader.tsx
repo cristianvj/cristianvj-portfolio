@@ -7,13 +7,13 @@ const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html>
-      <span className='canvas-load'></span>
+      <span className='canvas-load bg-gray-700 p-4 rounded-lg'></span>
       <p
         style={{
           fontSize: 14,
           color: '#f1f1f1',
           fontWeight: 800,
-          marginTop: 40
+          marginTop: 40,
         }}
       >{progress.toFixed(2)}%</p>
     </Html>

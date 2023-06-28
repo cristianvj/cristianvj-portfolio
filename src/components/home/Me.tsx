@@ -11,26 +11,82 @@ import { useFrame } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
   nodes: {
-    Wolf3D_Teeth001: THREE.SkinnedMesh;
+    Plane001_Plane002_BlackWood001: THREE.Mesh;
+    Plane001_Plane002_BlackWood001_1: THREE.Mesh;
+    Plane001_Plane002_BlackWood001_2: THREE.Mesh;
+    Plane001_Plane002_BlackWood001_3: THREE.Mesh;
+    Plane001_Plane002_BlackWood001_4: THREE.Mesh;
+    ["Node-Mesh001"]: THREE.Mesh;
+    ["Node-Mesh001_1"]: THREE.Mesh;
+    ["Node-Mesh001_2"]: THREE.Mesh;
+    WawaRug: THREE.Mesh;
+    mesh434900071: THREE.Mesh;
+    mesh434900071_1: THREE.Mesh;
+    mesh434900071_2: THREE.Mesh;
+    mesh434900071_3: THREE.Mesh;
+    mesh434900071_4: THREE.Mesh;
+    mesh434900071_5: THREE.Mesh;
+    mesh425587018: THREE.Mesh;
+    mesh425587018_1: THREE.Mesh;
+    mesh425587018_2: THREE.Mesh;
+    mesh425587018_3: THREE.Mesh;
+    iMac_1: THREE.Mesh;
+    iMac_1_1: THREE.Mesh;
+    iMac_1_2: THREE.Mesh;
+    Comp_Mouse: THREE.Mesh;
+    Houseplant_7_1: THREE.Mesh;
+    Houseplant_7_2: THREE.Mesh;
+    Houseplant_7_3: THREE.Mesh;
+    ["Node-Mesh"]: THREE.Mesh;
+    ["Node-Mesh_1"]: THREE.Mesh;
+    EyeLeft001: THREE.SkinnedMesh;
+    EyeRight001: THREE.SkinnedMesh;
     Wolf3D_Body001: THREE.SkinnedMesh;
     Wolf3D_Hair001: THREE.SkinnedMesh;
+    Wolf3D_Head001: THREE.SkinnedMesh;
     Wolf3D_Outfit_Bottom001: THREE.SkinnedMesh;
     Wolf3D_Outfit_Footwear001: THREE.SkinnedMesh;
     Wolf3D_Outfit_Top001: THREE.SkinnedMesh;
-    Wolf3D_Head001: THREE.SkinnedMesh;
-    EyeLeft001: THREE.SkinnedMesh;
-    EyeRight001: THREE.SkinnedMesh;
+    Wolf3D_Teeth001: THREE.SkinnedMesh;
     Hips: THREE.Bone;
   };
   materials: {
-    ["Wolf3D_Eye.001"]: THREE.MeshStandardMaterial;
-    Wolf3D_Body: THREE.MeshStandardMaterial;
-    Wolf3D_Hair: THREE.MeshStandardMaterial;
-    Wolf3D_Skin: THREE.MeshStandardMaterial;
-    Wolf3D_Outfit_Bottom: THREE.MeshStandardMaterial;
-    Wolf3D_Outfit_Footwear: THREE.MeshStandardMaterial;
-    ["Wolf3D_Outfit_Top.001"]: THREE.MeshStandardMaterial;
-    ["Wolf3D_Teeth.001"]: THREE.MeshStandardMaterial;
+    ["BlackWood.001"]: THREE.MeshStandardMaterial;
+    ["BlackCoatSteel.001"]: THREE.MeshStandardMaterial;
+    ["GrayPlastic.001"]: THREE.MeshStandardMaterial;
+    ["WhiteSteelScrew.001"]: THREE.MeshStandardMaterial;
+    ["BlackPlastic.001"]: THREE.MeshStandardMaterial;
+    lambert4SG: THREE.MeshStandardMaterial;
+    ["lambert2SG.001"]: THREE.MeshStandardMaterial;
+    ["lambert3SG.002"]: THREE.MeshBasicMaterial;
+    Rug: THREE.MeshStandardMaterial;
+    mat14: THREE.MeshStandardMaterial;
+    mat13: THREE.MeshStandardMaterial;
+    ["mat12.001"]: THREE.MeshStandardMaterial;
+    ["mat21.003"]: THREE.MeshStandardMaterial;
+    ["mat23.001"]: THREE.MeshStandardMaterial;
+    mat11: THREE.MeshStandardMaterial;
+    ["mat21.004"]: THREE.MeshStandardMaterial;
+    ["mat22.001"]: THREE.MeshStandardMaterial;
+    ["mat9.002"]: THREE.MeshStandardMaterial;
+    ["mat16.001"]: THREE.MeshStandardMaterial;
+    Screen: THREE.MeshStandardMaterial;
+    ScreenBlack: THREE.MeshStandardMaterial;
+    iMacBody: THREE.MeshStandardMaterial;
+    ["lambert3SG.003"]: THREE.MeshStandardMaterial;
+    ["Black.001"]: THREE.MeshStandardMaterial;
+    ["Brown.001"]: THREE.MeshStandardMaterial;
+    ["Plant_Green.001"]: THREE.MeshStandardMaterial;
+    Office_Cha: THREE.MeshStandardMaterial;
+    Office_Cha_1: THREE.MeshStandardMaterial;
+    ["Wolf3D_Eye.007"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Body.003"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Hair.003"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Skin.003"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Outfit_Bottom.003"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Outfit_Footwear.003"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Outfit_Top.003"]: THREE.MeshStandardMaterial;
+    ["Wolf3D_Teeth.007"]: THREE.MeshStandardMaterial;
   };
 };
 
@@ -41,24 +97,278 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
   
   
   const group = useRef<THREE.Group | null>(null);
-  const { nodes, materials, animations } = useGLTF("/mesh/megreeting.glb") as GLTFResult;
+  const { nodes, materials, animations } = useGLTF("/mesh/metyping.glb") as GLTFResult;
   const { actions } = useAnimations(animations, group);
   
   useFrame((state, delta) => group?.current?.rotation?.x &&   ( group.current.rotation.x += delta))
 
   useEffect(() => {
-    if (actions && actions["Armature.001|mixamo.com|Layer0"])
-      actions["Armature.001|mixamo.com|Layer0"].play();
+    console.log(actions)
+    if (actions && actions["Armature.001|mixamo.com|Layer0.002"])
+      actions["Armature.001|mixamo.com|Layer0.002"].play();
+    console.log(props.rotation);
   });
+
   
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
+        <group
+          name="Desk"
+          position={[0.224, -0.039, 0.553]}
+          rotation={[-Math.PI, 1.237, -Math.PI]}
+          scale={[0.784, 0.795, 1]}
+        >
+          <mesh
+            name="Plane001_Plane002_BlackWood001"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane001_Plane002_BlackWood001.geometry}
+            material={materials["BlackWood.001"]}
+          />
+          <mesh
+            name="Plane001_Plane002_BlackWood001_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane001_Plane002_BlackWood001_1.geometry}
+            material={materials["BlackCoatSteel.001"]}
+          />
+          <mesh
+            name="Plane001_Plane002_BlackWood001_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane001_Plane002_BlackWood001_2.geometry}
+            material={materials["GrayPlastic.001"]}
+          />
+          <mesh
+            name="Plane001_Plane002_BlackWood001_3"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane001_Plane002_BlackWood001_3.geometry}
+            material={materials["WhiteSteelScrew.001"]}
+          />
+          <mesh
+            name="Plane001_Plane002_BlackWood001_4"
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane001_Plane002_BlackWood001_4.geometry}
+            material={materials["BlackPlastic.001"]}
+          />
+        </group>
+        <group
+          name="LavaLamp"
+          position={[1.078, 0.805, 0.435]}
+          rotation={[Math.PI, -0.334, Math.PI]}
+          scale={[1, 0.817, 0.784]}
+        >
+          <mesh
+            name="Node-Mesh001"
+            castShadow
+            receiveShadow
+            geometry={nodes["Node-Mesh001"].geometry}
+            material={materials.lambert4SG}
+          />
+          <mesh
+            name="Node-Mesh001_1"
+            castShadow
+            receiveShadow
+            geometry={nodes["Node-Mesh001_1"].geometry}
+            material={materials["lambert2SG.001"]}
+          />
+          <mesh
+            name="Node-Mesh001_2"
+            castShadow
+            receiveShadow
+            geometry={nodes["Node-Mesh001_2"].geometry}
+            material={materials["lambert3SG.002"]}
+          />
+        </group>
+        <mesh
+          name="WawaRug"
+          castShadow
+          receiveShadow
+          geometry={nodes.WawaRug.geometry}
+          material={materials.Rug}
+          position={[0.46, -0.031, 0.295]}
+          rotation={[Math.PI, -0.334, Math.PI]}
+          scale={[1, 0.817, 0.784]}
+        />
+        <group
+          name="salameche"
+          position={[0.805, 0.802, 0.52]}
+          rotation={[0, 1.184, 0]}
+          scale={[0.882, 0.817, 0.907]}
+        >
+          <mesh
+            name="mesh434900071"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh434900071.geometry}
+            material={materials.mat14}
+          />
+          <mesh
+            name="mesh434900071_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh434900071_1.geometry}
+            material={materials.mat13}
+          />
+          <mesh
+            name="mesh434900071_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh434900071_2.geometry}
+            material={materials["mat12.001"]}
+          />
+          <mesh
+            name="mesh434900071_3"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh434900071_3.geometry}
+            material={materials["mat21.003"]}
+          />
+          <mesh
+            name="mesh434900071_4"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh434900071_4.geometry}
+            material={materials["mat23.001"]}
+          />
+          <mesh
+            name="mesh434900071_5"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh434900071_5.geometry}
+            material={materials.mat11}
+          />
+        </group>
+        <group
+          name="keyboard"
+          position={[-0.055, 0.728, 0.639]}
+          rotation={[-Math.PI, -0.168, -Math.PI]}
+          scale={[0.523, 0.817, 0.552]}
+        >
+          <mesh
+            name="mesh425587018"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh425587018.geometry}
+            material={materials["mat21.004"]}
+          />
+          <mesh
+            name="mesh425587018_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh425587018_1.geometry}
+            material={materials["mat22.001"]}
+          />
+          <mesh
+            name="mesh425587018_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh425587018_2.geometry}
+            material={materials["mat9.002"]}
+          />
+          <mesh
+            name="mesh425587018_3"
+            castShadow
+            receiveShadow
+            geometry={nodes.mesh425587018_3.geometry}
+            material={materials["mat16.001"]}
+          />
+        </group>
+        <group
+          name="iMac"
+          position={[-0.182, 0.728, 0.915]}
+          rotation={[0, 1.433, 0]}
+          scale={[0.832, 0.817, 0.956]}
+        >
+          <mesh
+            name="iMac_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.iMac_1.geometry}
+            material={materials.Screen}
+          />
+          <mesh
+            name="iMac_1_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.iMac_1_1.geometry}
+            material={materials.ScreenBlack}
+          />
+          <mesh
+            name="iMac_1_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.iMac_1_2.geometry}
+            material={materials.iMacBody}
+          />
+        </group>
+        <mesh
+          name="Comp_Mouse"
+          castShadow
+          receiveShadow
+          geometry={nodes.Comp_Mouse.geometry}
+          material={materials["lambert3SG.003"]}
+          position={[0.549, -0.039, -0.393]}
+          rotation={[Math.PI, -0.334, Math.PI]}
+          scale={[1, 0.817, 0.784]}
+        />
+        <group
+          name="Houseplant_7"
+          position={[1.566, 0.002, 0.202]}
+          rotation={[-Math.PI / 2, 0, -2.808]}
+          scale={[1, 0.784, 0.817]}
+        >
+          <mesh
+            name="Houseplant_7_1"
+            castShadow
+            receiveShadow
+            geometry={nodes.Houseplant_7_1.geometry}
+            material={materials["Black.001"]}
+          />
+          <mesh
+            name="Houseplant_7_2"
+            castShadow
+            receiveShadow
+            geometry={nodes.Houseplant_7_2.geometry}
+            material={materials["Brown.001"]}
+          />
+          <mesh
+            name="Houseplant_7_3"
+            castShadow
+            receiveShadow
+            geometry={nodes.Houseplant_7_3.geometry}
+            material={materials["Plant_Green.001"]}
+          />
+        </group>
+        <group
+          name="Chair"
+          position={[0.016, -0.039, 0.044]}
+          rotation={[-Math.PI, 0.043, -Math.PI]}
+          scale={[0.632, 0.64, 0.626]}
+        >
+          <mesh
+            name="Node-Mesh"
+            castShadow
+            receiveShadow
+            geometry={nodes["Node-Mesh"].geometry}
+            material={materials.Office_Cha}
+          />
+          <mesh
+            name="Node-Mesh_1"
+            castShadow
+            receiveShadow
+            geometry={nodes["Node-Mesh_1"].geometry}
+            material={materials.Office_Cha_1}
+          />
+        </group>
         <group name="Armature001">
           <skinnedMesh
             name="EyeLeft001"
             geometry={nodes.EyeLeft001.geometry}
-            material={materials["Wolf3D_Eye.001"]}
+            material={materials["Wolf3D_Eye.007"]}
             skeleton={nodes.EyeLeft001.skeleton}
             morphTargetDictionary={nodes.EyeLeft001.morphTargetDictionary}
             morphTargetInfluences={nodes.EyeLeft001.morphTargetInfluences}
@@ -66,7 +376,7 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
           <skinnedMesh
             name="EyeRight001"
             geometry={nodes.EyeRight001.geometry}
-            material={materials["Wolf3D_Eye.001"]}
+            material={materials["Wolf3D_Eye.007"]}
             skeleton={nodes.EyeRight001.skeleton}
             morphTargetDictionary={nodes.EyeRight001.morphTargetDictionary}
             morphTargetInfluences={nodes.EyeRight001.morphTargetInfluences}
@@ -74,19 +384,19 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
           <skinnedMesh
             name="Wolf3D_Body001"
             geometry={nodes.Wolf3D_Body001.geometry}
-            material={materials.Wolf3D_Body}
+            material={materials["Wolf3D_Body.003"]}
             skeleton={nodes.Wolf3D_Body001.skeleton}
           />
           <skinnedMesh
             name="Wolf3D_Hair001"
             geometry={nodes.Wolf3D_Hair001.geometry}
-            material={materials.Wolf3D_Hair}
+            material={materials["Wolf3D_Hair.003"]}
             skeleton={nodes.Wolf3D_Hair001.skeleton}
           />
           <skinnedMesh
             name="Wolf3D_Head001"
             geometry={nodes.Wolf3D_Head001.geometry}
-            material={materials.Wolf3D_Skin}
+            material={materials["Wolf3D_Skin.003"]}
             skeleton={nodes.Wolf3D_Head001.skeleton}
             morphTargetDictionary={nodes.Wolf3D_Head001.morphTargetDictionary}
             morphTargetInfluences={nodes.Wolf3D_Head001.morphTargetInfluences}
@@ -94,25 +404,25 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
           <skinnedMesh
             name="Wolf3D_Outfit_Bottom001"
             geometry={nodes.Wolf3D_Outfit_Bottom001.geometry}
-            material={materials.Wolf3D_Outfit_Bottom}
+            material={materials["Wolf3D_Outfit_Bottom.003"]}
             skeleton={nodes.Wolf3D_Outfit_Bottom001.skeleton}
           />
           <skinnedMesh
             name="Wolf3D_Outfit_Footwear001"
             geometry={nodes.Wolf3D_Outfit_Footwear001.geometry}
-            material={materials.Wolf3D_Outfit_Footwear}
+            material={materials["Wolf3D_Outfit_Footwear.003"]}
             skeleton={nodes.Wolf3D_Outfit_Footwear001.skeleton}
           />
           <skinnedMesh
             name="Wolf3D_Outfit_Top001"
             geometry={nodes.Wolf3D_Outfit_Top001.geometry}
-            material={materials["Wolf3D_Outfit_Top.001"]}
+            material={materials["Wolf3D_Outfit_Top.003"]}
             skeleton={nodes.Wolf3D_Outfit_Top001.skeleton}
           />
           <skinnedMesh
             name="Wolf3D_Teeth001"
             geometry={nodes.Wolf3D_Teeth001.geometry}
-            material={materials["Wolf3D_Teeth.001"]}
+            material={materials["Wolf3D_Teeth.007"]}
             skeleton={nodes.Wolf3D_Teeth001.skeleton}
             morphTargetDictionary={nodes.Wolf3D_Teeth001.morphTargetDictionary}
             morphTargetInfluences={nodes.Wolf3D_Teeth001.morphTargetInfluences}
@@ -124,4 +434,4 @@ export default function Me(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/mesh/megreeting.glb");
+useGLTF.preload("/mesh/metyping.glb");
