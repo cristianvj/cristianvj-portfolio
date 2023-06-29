@@ -115,7 +115,7 @@ const ContactSection = () => {
       </div>
 
       <div
-        className='xl:h-auto md:h-[550px] h-[350px] w-full md:w-[50%]'
+        className='md:h-[550px] h-[350px] w-full md:w-[50%]'
       >
         <EarthCanvas />
       </div>
