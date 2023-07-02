@@ -23,7 +23,9 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
 
    useEffect(() => {
     if(params.slug){
-      getPost(params.slug).then((data) => setPost(data));
+      getPostDetails(params.slug)
+        .then((data) => setPost(data))
+        .catch((error) => {console.log(error)});
     };
   }, [params.slug]);
   
@@ -58,8 +60,3 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
 };
 
 export default PostDetails;
-
-async function getPost(slug: string) {
-  const res = await getPostDetails(slug);
-  return res;
-}
