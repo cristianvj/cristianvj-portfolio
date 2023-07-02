@@ -7,7 +7,6 @@ const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html>
-      <span className='canvas-load bg-gray-700 p-4 rounded-lg'></span>
       <p
         style={{
           fontSize: 14,
