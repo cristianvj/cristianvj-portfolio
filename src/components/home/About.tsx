@@ -111,6 +111,7 @@ const About = () => {
         I have experience working with frameworks like React, Node.js, and Three.js. <br/> <br/> 
         I&apos;m a quick learner and collaborate closely with international and remote teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. <br/> <br/>
         Let&apos;s work together to bring your ideas to life!
+        
       </motion.p>
     </div>
 
