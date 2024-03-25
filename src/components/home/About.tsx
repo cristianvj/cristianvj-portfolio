@@ -6,53 +6,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { grpahCMSImageLoader } from "../../utils/utils";
 import { useDarkContext } from '@/context/darkMode.context';
-
-const services = [
-  {
-    title: "Javascript",
-    icon: "javascript",
-  },
-  {
-    title: "Typescript",
-    icon: "typescript",
-  },
-  {
-    title: "React.js",
-    icon: "react",
-  },
-  {
-    title: "Next.js",
-    icon: "next",
-  },
-  {
-    title: "Three.js",
-    icon: "threejs",
-  },
-  {
-    title: "Redux.js",
-    icon: "redux",
-  },
-  {
-    title: "React testing Library",
-    icon: "rtl",
-  },
-  {
-    title: "Storybook",
-    icon: "storybook",
-  },
-  {
-    title: "Styled Components",
-    icon: "styled",
-  },
-  {
-    title: "Tailwind",
-    icon: "tailwind",
-  },
-  {
-    title: "Git and Github",
-    icon: "git",
-  },
-];
+import { services } from "./utils";
 
 interface Props {
   index: number;
@@ -106,10 +60,12 @@ const About = () => {
           ${darkMode ? "text-gray-200" : "text-gray-800"}
         `}
       >
-        I&apos;m a skilled software developer with experience in JavaScript and
-        TypeScript. <br/> <br/>
-        I have experience working with frameworks like React, Node.js, and Three.js. <br/> <br/> 
+        I&apos;m a skilled software developer with experience developing Full Stack interactive 3D web apps with JavaScript and TypeScript. <br/> <br/>
+
+        I have experience working with frameworks like React, Next.js, Node.js, Express.js, Nest.js, Three.js, SQL and no SQL Databases, and among others <br/> <br/> 
+    
         I&apos;m a quick learner and collaborate closely with international and remote teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. <br/> <br/>
+
         Let&apos;s work together to bring your ideas to life!
         
       </motion.p>

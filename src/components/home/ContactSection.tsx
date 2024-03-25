@@ -68,11 +68,11 @@ const ContactSection = () => {
           onSubmit={handleSubmit} 
           className={`
             mt-12 flex flex-col gap-8
-            ${darkMode ? "" : "bg-gray-800 p-4 rounded-xl"}
+            ${darkMode ? "" : "bg-gray-100 p-4 rounded-xl"}
           `}
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className={`${darkMode ? "text-gray-100" : "text-gray-800"} font-medium mb-4`}>Your Name</span>
             <input 
               type="text"
               name='name'
@@ -83,7 +83,7 @@ const ContactSection = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your E-mail</span>
+            <span className={`${darkMode ? "text-gray-100" : "text-gray-800"} font-medium mb-4`}>Your E-mail</span>
             <input 
               type="email"
               name='email'
@@ -94,7 +94,7 @@ const ContactSection = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className={`${darkMode ? "text-gray-100" : "text-gray-800"} font-medium mb-4`}>Your Message</span>
             <textarea 
               rows={7}
               name='message'
