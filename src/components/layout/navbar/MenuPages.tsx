@@ -7,10 +7,10 @@ interface props {
   path: string;
   darkMode: boolean | undefined;
   showResponsiveMenu: boolean;
-  setShowresponsiveMenu: (showResponsiveMenu: boolean) => void;
+  setShowResponsiveMenu: (showResponsiveMenu: boolean) => void;
 }
 
-const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowresponsiveMenu, showResponsiveMenu }) => {
+const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowResponsiveMenu, showResponsiveMenu }) => {
 
   return (
     <ul
@@ -43,7 +43,7 @@ const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowresponsiveMenu, s
                 ${classes.navbarLi.link} 
                 ${darkMode === true && classes.navbarLi.linkDark}
               `}
-              onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
+              onClick={() => setShowResponsiveMenu(!showResponsiveMenu)}
             >
               {page.name}
             </Link>

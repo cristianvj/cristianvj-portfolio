@@ -20,7 +20,7 @@ const pacifico = Pacifico({
 });
 
 const Navbar = () => {
-  const [showResponsiveMenu, setShowresponsiveMenu] = useState(false);
+  const [showResponsiveMenu, setShowResponsiveMenu] = useState(false);
   const [showLanguages, setShowLanguages] = useState(false);
   const [logged] = useState(false);
 
@@ -92,7 +92,7 @@ const Navbar = () => {
           `} 
           aria-controls="navbar-default" 
           aria-expanded="false"
-          onClick={() => setShowresponsiveMenu(!showResponsiveMenu)}
+          onClick={() => setShowResponsiveMenu(!showResponsiveMenu)}
         >
           <span className="sr-only">Open main menu</span>
           <svg 
@@ -125,14 +125,14 @@ const Navbar = () => {
             pages={pages} 
             path={path}
             darkMode={darkMode}
-            setShowresponsiveMenu={setShowresponsiveMenu}
+            setShowResponsiveMenu={setShowResponsiveMenu}
             showResponsiveMenu={showResponsiveMenu}
           />
 
           <div className='mt-2 lg:mt-0 lg:ml-4 flex flex-wrap lg:flex-nowrap justify-center'>
             <SotialNetworkButtons 
               darkMode={darkMode} 
-              setShowresponsiveMenu={setShowresponsiveMenu} 
+              setShowResponsiveMenu={setShowResponsiveMenu} 
               showResponsiveMenu={showResponsiveMenu}
             />
             {/* <LanguageButton 
@@ -140,7 +140,7 @@ const Navbar = () => {
               showLanguages={showLanguages} 
               setShowLanguages={setShowLanguages} 
             /> */}
-            <DarkModeButton />
+            <DarkModeButton setShowResponsiveMenu={setShowResponsiveMenu} />
            {/*  <LoginButon logged={logged} darkMode={darkMode} /> */}
 
           </div>
