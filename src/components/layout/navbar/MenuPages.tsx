@@ -41,7 +41,7 @@ const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowResponsiveMenu, s
                 ${path === page.href && classes.navbarLi.active} 
                 ${(page.href === "/blog" && path.includes('/blog')) && classes.navbarLi.active}
                 ${classes.navbarLi.link} 
-                ${darkMode === true && classes.navbarLi.linkDark}
+                ${darkMode === true && path !== page.href && classes.navbarLi.linkDark}
               `}
               onClick={() => setShowResponsiveMenu(!showResponsiveMenu)}
             >
