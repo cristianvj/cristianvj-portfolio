@@ -57,7 +57,7 @@ const PostHeader: FC<props> = ({post}) => {
             flex 
             nowrap
             items-center
-            ${darkMode ? "dark:bg-gray-900" : "bg-gray-200"}
+            ${darkMode ? "dark:bg-gray-700" : "bg-gray-200"}
           `}>
             {
               post?.author?.photo?.url && 

@@ -25,7 +25,7 @@ const PostCard: FC<any> = ({ post }) => {
         />
       }
       <div className="p-5">
-          <a href="#">
+          <a href={`/blog/${post.slug}`}>
               <h5 className={`
                 mb-2 text-2xl font-bold tracking-tight text-gray-800 
                 ${darkMode && "dark:text-white"}`}>{post.title}</h5>

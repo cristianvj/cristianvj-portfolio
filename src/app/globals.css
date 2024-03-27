@@ -12,17 +12,23 @@ body,
 
 pre {
   --tw-bg-opacity: 1;
-  background-color: #e5e7eb;
   padding: 1.5rem;
-  color: #1f293b;
-  font-size: 1.125rem;
+  color: #1f2937;
+  font-style: italic;
+  font-size: .9rem;
   margin-bottom: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.3rem;
+  line-height: 1.2rem;
 }
-
+.preDark {
+}
+.preLight {
+  background-color: #e5e7eb;
+}
 .title-shadow{
   text-shadow: 0.2px 0.2px 1px white;
 }
-
 .title-card-image{
   color: white;
   text-shadow:
