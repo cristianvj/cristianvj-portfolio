@@ -1,17 +1,20 @@
+import React, { FC } from 'react'
 import { useDarkContext } from '@/context/darkMode.context'
 import { grpahCMSImageLoader } from '@/utils/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { FC } from 'react'
+
+import { classes } from '@/utils/consts';
 
 const PostCard: FC<any> = ({ post }) => {
 
   const { darkMode } = useDarkContext() || {};
+  const { bgLightMode, bgDarkMode, h5Dark, h5Light, pDark, pLight } = classes.blog;
 
   return (
     <div className={`
       w-full md:max-w-[48%] lg:max-w-[30%] bg-gray-100 rounded-lg shadow-xl  border-gray-700
-      ${darkMode && "dark:bg-gray-800 dark:border-gray-700"}`}>
+      ${darkMode ? bgDarkMode : bgLightMode}`}>
       {
         post?.author?.photo?.url &&
         <Image
@@ -27,11 +30,11 @@ const PostCard: FC<any> = ({ post }) => {
       <div className="p-5">
           <a href={`/blog/${post.slug}`}>
               <h5 className={`
-                mb-2 text-2xl font-bold tracking-tight text-gray-800 
-                ${darkMode && "dark:text-white"}`}>{post.title}</h5>
+                mb-2 text-2xl font-bold tracking-tight 
+                ${darkMode ? h5Dark : h5Light}`}>{post.title}</h5>
           </a>
-          <p className={`mb-3 font-normal text-gray-700 
-          ${darkMode && "dark:text-gray-400"}`}>{post.excerpt}</p>
+          <p className={`mb-3 font-normal
+          ${darkMode ? pDark : pLight}`}>{post.excerpt}</p>
 
           <Link href={`/blog/${post.slug}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-orange-600 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
               Leer mas

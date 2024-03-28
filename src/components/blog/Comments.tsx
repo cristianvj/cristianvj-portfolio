@@ -6,6 +6,7 @@ import moment from 'moment';
 import { useDarkContext } from '@/context/darkMode.context';
 
 import { getComments } from '../../services';
+import { classes } from '@/utils/consts';
 
 interface props {
   slug: string;
@@ -19,6 +20,7 @@ interface comments {
 
 const Comments: FC<props> = ({ slug }) => {
   const { darkMode } = useDarkContext() || {};
+  const { bgLightMode, bgDarkMode, h5Dark, h5Light, pDark, pLight, spanDark, spanLight } = classes.blog;
 
   const [comments, setComments] = useState<comments[]>([]);
 
@@ -37,11 +39,11 @@ const Comments: FC<props> = ({ slug }) => {
           rounded-lg 
           shadow-lg
           p-5
-          bg-gray-100
-          ${darkMode && "dark:bg-gray-800 dark:text-gray-100"}
+          bg-slate-100
+          ${darkMode ? bgDarkMode : bgLightMode}
           
         `}>
-          <h3 className="text-xl mb-8 pb-4 font-semibold border-b">
+          <h3 className={`text-xl mb-8 pb-4 font-semibold border-b ${darkMode ? h5Dark : h5Light}`}>
             Comentarios de los usuarios
           </h3>
             {comments.map((comment, index) => (
@@ -50,8 +52,7 @@ const Comments: FC<props> = ({ slug }) => {
                 p-4
                 rounded-lg
                 shadow-lg
-                bg-gray-200
-                ${darkMode && "dark:bg-gray-900 dark:text-gray-100"}
+                ${darkMode ? "bg-slate-800 text-slate-200" : ""}
               `}>
                 <p className="mb-4">
                   <span className="font-semibold">{comment.name}</span>
@@ -60,7 +61,7 @@ const Comments: FC<props> = ({ slug }) => {
                   {' '}
                   {moment(comment.createdAt).format('MMM DD, YYYY')}
                 </p>
-                <p className="whitespace-pre-line text-gray-600 w-full">{comment.comment}</p>
+                <p className="whitespace-pre-line text-slate-600 w-full">{comment.comment}</p>
               </div>
             ))}
         </div>

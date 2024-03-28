@@ -20,11 +20,22 @@ export const classes = {
     `,
   },
   navbarIcons: {
-    dark: "text-slate-400 hover:bg-slate-700 focus:ring-slate-700",
+    dark: "text-slate-300 hover:bg-slate-700 focus:ring-slate-700",
     light: "sm:flex text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-slate-200 rounded-lg text-sm p-2.5 mr-1"
   },
   languageItem: "block px-4 py-2 text-sm text-slate-700 hover:bg-slate-200",
-  languageItemDark: "dark:text-slate-400 dark:hover:bg-slate-600 dark:hover:text-orange-600"
+  languageItemDark: "text-slate-400 hover:bg-slate-600 hover:text-orange-600",
+  blog: {
+    bgDarkMode: 'shadow-sm shadow-slate-700 bg-slate-800 border-slate-800',
+    bgLightMode: 'shadow-xl bg-slate-100 border-slate-300',
+    h5Dark: 'text-slate-100', 
+    h5Light: 'text-slate-800', 
+    pDark: 'text-slate-200', 
+    pLight: 'text-slate-800', 
+    spanDark: 'text-slate-400', 
+    spanLight: 'text-slate-500',
+    orangeSpan: 'font-semibold text-orange-600',
+  }
 };
 
 export const iconPaths = {

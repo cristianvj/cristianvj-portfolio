@@ -44,11 +44,11 @@ const PostDetails: FC<paramsTypes> = ({params}) =>{
             </div>
             <div className="flex flex-col gap-3 md:w-[23%]">
               {
-                post?.categories?.length && 
+                /* post?.categories?.length && 
                   <PostWidget 
                     slug={post.slug} 
                     categories={post.categories.map(category => category.slug)} 
-                  />
+                  /> */
               }
               <Categories/>
             </div>
