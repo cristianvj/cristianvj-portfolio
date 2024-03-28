@@ -17,8 +17,7 @@ const Main: FC<props> = ( { children } ) => {
       w-full 
       px-4
       min-h-screen 
-      bg-white 
-      ${darkMode && darkMode && "dark:bg-gray-900"}`}
+      ${darkMode ? "bg-slate-900" : "bg-slate-200"}`}
     >
       { children }    
     </main>

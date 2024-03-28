@@ -68,7 +68,8 @@ const ContactSection = () => {
           onSubmit={handleSubmit} 
           className={`
             mt-12 flex flex-col gap-8
-            ${darkMode ? "" : "bg-gray-100 p-4 rounded-xl"}
+            p-4 rounded-xl 
+            ${darkMode ? "bg-slate-800" : "bg-slate-300 "}
           `}
         >
           <label className="flex flex-col">

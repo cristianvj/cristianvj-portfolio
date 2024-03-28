@@ -1,16 +1,30 @@
+const navBarLiMorgins = 'block py-2 pl-3 pr-4';
+
 export const classes = {
   navbarLi: {
-    link: "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0",
-    linkDark: "dark:text-white lg:dark:hover:text-orange-600 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent",
-    active: "block py-2 pl-3 pr-4 text-white bg-orange-600 rounded md:bg-transparent md:text-orange-600 md:p-0 ",
-    activeDark: "dark:text-orange md:dark:text-orange-600",
+    link: `${navBarLiMorgins}
+      text-slate-700 rounded hover:bg-slate-200 
+      lg:hover:bg-transparent lg:border-0 lg:hover:text-orange-600 lg:p-0
+    `,
+    linkDark: `${navBarLiMorgins} 
+      text-slate-300 rounded hover:text-slate-200 hover:bg-slate-600 
+      lg:hover:text-orange-600 hover:text-white lg:hover:bg-transparent
+    `,
+    active: `${navBarLiMorgins} 
+      text-white bg-orange-600 rounded 
+      md:bg-transparent md:text-orange-600 md:p-0
+    `,
+    activeDark: `${navBarLiMorgins} 
+      text-slate-100 bg-orange-700 rounded 
+      lg:bg-transparent lg:text-orange-600 lg:p-0
+    `,
   },
   navbarIcons: {
-    dark: "dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700",
-    light: "sm:flex text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 mr-1"
+    dark: "text-slate-400 hover:bg-slate-700 focus:ring-slate-700",
+    light: "sm:flex text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-slate-200 rounded-lg text-sm p-2.5 mr-1"
   },
-  languageItem: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200",
-  languageItemDark: "dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-orange-600"
+  languageItem: "block px-4 py-2 text-sm text-slate-700 hover:bg-slate-200",
+  languageItemDark: "dark:text-slate-400 dark:hover:bg-slate-600 dark:hover:text-orange-600"
 };
 
 export const iconPaths = {

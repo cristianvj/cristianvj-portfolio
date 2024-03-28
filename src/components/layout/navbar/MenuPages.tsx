@@ -22,15 +22,13 @@ const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowResponsiveMenu, s
       lg:p-0 
       mt-4 
       border 
-      border-gray-100 
+      border-slate-100 
       rounded-lg 
-      bg-gray-50 
       lg:flex-row 
       lg:space-x-8 
       lg:mt-0 
-      lg:border-0 
-      lg:bg-white
-      ${darkMode === true && "dark:border-gray-700 dark:bg-gray-800 lg:dark:bg-gray-800 "}`}
+      lg:border-0
+      ${darkMode ? "border-slate-600 bg-slate-700 lg:bg-slate-800 " : "border-slate-300 bg-slate-100 lg:bg-slate-300 "}`}
     >
       {
         pages.map((page, id) => (
@@ -38,10 +36,14 @@ const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowResponsiveMenu, s
             <Link 
               href={page.href} 
               className={`
-                ${path === page.href && classes.navbarLi.active} 
-                ${(page.href === "/blog" && path.includes('/blog')) && classes.navbarLi.active}
-                ${classes.navbarLi.link} 
-                ${darkMode === true && path !== page.href && classes.navbarLi.linkDark}
+                ${path === page.href 
+                  ? darkMode 
+                    ? classes.navbarLi.activeDark
+                    : classes.navbarLi.active
+                  : darkMode 
+                    ? classes.navbarLi.linkDark 
+                    : classes.navbarLi.link
+                }
               `}
               onClick={() => setShowResponsiveMenu(!showResponsiveMenu)}
             >

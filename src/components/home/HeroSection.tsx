@@ -12,7 +12,7 @@ const HeroSection = () => {
     <section className={`
       relative w-full h-[calc(100vh_-_112px)] mx-auto flex flex-wrap justify-evenly 
     `}>
-      <div className={`w-full md:w-[40%] md:pt-4 md:pl-4 absolute left-1 z-20 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'} p-5 rounded-xl bg-opacity-60`}>
+      <div className={`w-full md:w-[40%] md:pt-4 md:pl-4 absolute left-1 z-20 ${darkMode ? 'bg-slate-800' : 'bg-slate-300'} p-5 rounded-xl bg-opacity-60`}>
         <h1 className={`
            bg-opacity-100 text-3xl md:text-4xl
           ${darkMode ? "text-white" : "text-gray-600"}

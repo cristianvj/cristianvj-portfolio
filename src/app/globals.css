@@ -21,11 +21,6 @@ pre {
   border-radius: 0.3rem;
   line-height: 1.2rem;
 }
-.preDark {
-}
-.preLight {
-  background-color: #e5e7eb;
-}
 .title-shadow{
   text-shadow: 0.2px 0.2px 1px white;
 }

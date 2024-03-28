@@ -46,7 +46,7 @@ const About = () => {
   <section className={`
   z-20 relative p-4 my-8 gap-4 flex flex-wrap justify-center align-middle 
   rounded-lg drop-shadow-lg md:py-24
-    ${darkMode ? "bg-gray-800" : "bg-gray-100" }
+    ${darkMode ? "bg-slate-800" : "bg-slate-300" }
   `}>
     <div className="w-full md:w-[48%]">
       <motion.div variants={textVariant()}>

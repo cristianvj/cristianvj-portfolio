@@ -38,14 +38,9 @@ const Navbar = () => {
     <nav 
       className={`
         fixed z-[100] 
-        w-full 
-        bg-white
-        border-b 
-        border-b-gray-300
-        ${darkMode === true && `
-          dark:bg-gray-800 
-          dark:border-b-gray-600
-        `}
+        w-full
+        border-b
+        ${darkMode ? ' bg-slate-800 border-b-slate-600' : 'bg-slate-300 border-b-slate-400'}
       `}
     >
       <div className="flex flex-wrap lg:flex-nowrap items-center justify-between lg:container mx-auto py-4 px-10">
@@ -88,7 +83,7 @@ const Navbar = () => {
             ring-gray-500 
             focus:ring-2 
             focus:ring-gray-200
-            ${darkMode && "dark:hover:bg-gray-700 dark:focus:ring-gray-600 dark:text-gray-400"}
+            ${darkMode && "hover:bg-gray-700 focus:ring-gray-600 text-gray-400"}
           `} 
           aria-controls="navbar-default" 
           aria-expanded="false"
