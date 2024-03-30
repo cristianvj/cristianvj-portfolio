@@ -11,6 +11,7 @@ interface props {
 }
 
 const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowResponsiveMenu, showResponsiveMenu }) => {
+  
 
   return (
     <ul
@@ -36,7 +37,7 @@ const MenuPages: FC<props> = ({ pages, path,  darkMode, setShowResponsiveMenu, s
             <Link 
               href={page.href} 
               className={`
-                ${path === page.href 
+                ${path.split('/')[1] === page.href.split('/')[1] 
                   ? darkMode 
                     ? classes.navbarLi.activeDark
                     : classes.navbarLi.active

@@ -20,7 +20,7 @@ interface comments {
 
 const Comments: FC<props> = ({ slug }) => {
   const { darkMode } = useDarkContext() || {};
-  const { bgLightMode, bgDarkMode, h5Dark, h5Light, pDark, pLight, spanDark, spanLight } = classes.blog;
+  const { bgLightMode, bgDarkMode, h5Dark, h5Light, spanDark, spanLight } = classes.blog;
 
   const [comments, setComments] = useState<comments[]>([]);
 
@@ -52,7 +52,7 @@ const Comments: FC<props> = ({ slug }) => {
                 p-4
                 rounded-lg
                 shadow-lg
-                ${darkMode ? "bg-slate-800 text-slate-200" : ""}
+                ${darkMode ? "bg-slate-700 text-slate-200" : "bg-slate-200 text-slate-800" }
               `}>
                 <p className="mb-4">
                   <span className="font-semibold">{comment.name}</span>
@@ -61,7 +61,7 @@ const Comments: FC<props> = ({ slug }) => {
                   {' '}
                   {moment(comment.createdAt).format('MMM DD, YYYY')}
                 </p>
-                <p className="whitespace-pre-line text-slate-600 w-full">{comment.comment}</p>
+                <p className={`whitespace-pre-line w-full ${darkMode ? spanDark : spanLight}`}>{comment.comment}</p>
               </div>
             ))}
         </div>

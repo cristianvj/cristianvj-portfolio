@@ -5,6 +5,7 @@ import React, { FC, useState, useEffect } from 'react';
 import { useDarkContext } from '@/context/darkMode.context';
 
 import { submitComment } from '../../services';
+import { classes } from '@/utils/consts';
 
 interface props {
   slug: string;
@@ -19,6 +20,8 @@ interface typesFormData {
 
 const CommentsForm: FC<props> = ({ slug }) => {
   const { darkMode } = useDarkContext() || {};
+
+  const { bgLightMode, bgDarkMode, h5Dark, h5Light } = classes.blog;
 
   const [error, setError] = useState(false);
   const [localStorage, setLocalStorage] = useState<Storage | null>(null);
@@ -99,17 +102,13 @@ const CommentsForm: FC<props> = ({ slug }) => {
 
   return (
     <div className={`
-      bg-gray-200 
       shadow-lg 
       rounded-lg 
       p-8 pb-12 
       my-8
-      ${darkMode && `
-        bg-gray-800
-        dark:text-gray-100
-      `}
+      ${darkMode ? bgDarkMode : bgLightMode}
     `}>
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4">Escribe un comentario</h3>
+      <h3 className={`text-xl mb-8 font-semibold border-b pb-4 ${darkMode ? h5Dark : h5Light}`}>Escribe un comentario</h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea 
           value={formData.comment} 
@@ -121,12 +120,14 @@ const CommentsForm: FC<props> = ({ slug }) => {
             rounded-lg 
             h-40 
             focus:ring-2 
-            focus:ring-gray-300 
-            bg-white 
-            text-gray-800
-            ${darkMode && `
-              bg-gray-200
-              focus:ring-gray-200
+            
+            ${darkMode ? `
+            text-slate-200
+              bg-slate-600
+              focus:ring-slate-200
+            ` : `
+              bg-slate-200
+              focus:ring-slate-400
             `}
           `} 
           name="comment" 
@@ -144,12 +145,13 @@ const CommentsForm: FC<props> = ({ slug }) => {
             w-full 
             rounded-lg 
             focus:ring-2 
-            focus:ring-gray-300 
-            bg-white 
-            text-gray-800
-            ${darkMode && `
-              bg-gray-200
-              focus:ring-gray-200
+            ${darkMode ? `
+            text-slate-200
+              bg-slate-600
+              focus:ring-slate-200
+            ` : `
+              bg-slate-200
+              focus:ring-slate-400
             `}
           `} 
           placeholder="Name" 
@@ -164,12 +166,13 @@ const CommentsForm: FC<props> = ({ slug }) => {
             w-full 
             rounded-lg 
             focus:ring-2 
-            focus:ring-gray-300 
-            bg-white 
-            text-gray-800
-            ${darkMode && `
-              bg-gray-200
-              focus:ring-gray-200
+            ${darkMode ? `
+            text-slate-200
+              bg-slate-600
+              focus:ring-slate-200
+            ` : `
+              bg-slate-200
+              focus:ring-slate-400
             `}
           `} 
           placeholder="Email" 
@@ -179,7 +182,7 @@ const CommentsForm: FC<props> = ({ slug }) => {
       <div className="grid grid-cols-1 gap-4 mb-4">
         <div>
           <input checked={formData.storeData} onChange={onInputChange} type="checkbox" id="storeData" name="storeData" value="true" />
-          <label className="text-gray-500 cursor-pointer" htmlFor="storeData"> Save my name, email in this browser for the next time I comment.</label>
+          <label className="text-slate-500 cursor-pointer" htmlFor="storeData"> Save my name, email in this browser for the next time I comment.</label>
         </div>
       </div>
       {error && <p className="text-xs text-red-500">All fields are mandatory</p>}

@@ -12,7 +12,7 @@ export const classes = {
     `,
     active: `${navBarLiMorgins} 
       text-white bg-orange-600 rounded 
-      md:bg-transparent md:text-orange-600 md:p-0
+      lg:bg-transparent lg:text-orange-600 lg:p-0
     `,
     activeDark: `${navBarLiMorgins} 
       text-slate-100 bg-orange-700 rounded 
