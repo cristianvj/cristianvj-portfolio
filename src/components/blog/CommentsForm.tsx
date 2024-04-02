@@ -58,7 +58,7 @@ const CommentsForm: FC<props> = ({ slug }) => {
     }
   };
 
-  const handlePostSubmission = () => {
+  const handleCommentSubmission = () => {
     setError(false);
     const { name, email, comment, storeData } = formData;
     if (!name || !email || !comment) {
@@ -135,7 +135,7 @@ const CommentsForm: FC<props> = ({ slug }) => {
         />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <input 
+        <input
           type="text" 
           value={formData.name} 
           onChange={onInputChange} 
@@ -187,7 +187,7 @@ const CommentsForm: FC<props> = ({ slug }) => {
       </div>
       {error && <p className="text-xs text-red-500">All fields are mandatory</p>}
       <div className="mt-8">
-        <button type="button" onClick={handlePostSubmission} className="transition duration-500 ease hover:bg-orange-800 inline-block bg-orange-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Post Comment</button>
+        <button type="button" onClick={handleCommentSubmission} className="transition duration-500 ease hover:bg-orange-800 inline-block bg-orange-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Post Comment</button>
         {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submitted for review</span>}
       </div>
     </div>

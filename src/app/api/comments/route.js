@@ -1,14 +1,15 @@
 import { GraphQLClient, gql } from 'graphql-request';
+import { NextResponse } from 'next/server';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 /** *************************************************************
-* Any file inside the folder pages/api is mapped to /api/* and  *
+* Any file inside the folder app/api is mapped to /api/* and  *
 * will be treated as an API endpoint instead of a page.         *
 *************************************************************** */
 
-// export a default function for API route to work
 export async function POST(req, res) {
+  const body = await req.json();
   const graphQLClient = new GraphQLClient((graphqlAPI), {
     headers: {
       authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
@@ -22,11 +23,11 @@ export async function POST(req, res) {
   `;
 
   const result = await graphQLClient.request(query, {
-    name: req.body.name,
-    email: req.body.email,
-    comment: req.body.comment,
-    slug: req.body.slug,
+    name: body.name,
+    email: body.email,
+    comment: body.comment,
+    slug: body.slug,
   });
 
-  return res.status(200).send(result);
+  return NextResponse.json(result);
 }

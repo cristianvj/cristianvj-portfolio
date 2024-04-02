@@ -29,7 +29,7 @@ const ContactSection = () => {
     setLoading(true);
 
     emailjs.send(
-      'service_wgsnb4b', 
+      'service_29grrix', 
       'template_dih40xf', 
       {
         from_name: form.name,
