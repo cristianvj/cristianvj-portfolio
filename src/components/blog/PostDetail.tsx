@@ -24,7 +24,7 @@ const PostDetail: FC<props> = ({post}) => {
             h3: ({ children }) => <h3 className={`font-semibold mb-3 text-2xl`}>{children}</h3>,
             h4: ({ children }) => <h4 className={`text-xl font-semibold mb-4`}>{children}</h4>,
             p: ({ children }) => <p className={`mb-4 text-lg text-justify font-normal ${darkMode ? pDark : pLight}`}>{children}</p>,
-            ul: ({ children }) => <ul className={`list-disc ml-5 mb-6 text-lg text-justify`}>{children}</ul>,
+            ul: ({ children }) => <ul className={`list-disc ml-5 pl-4 mb-6 text-lg text-justify ${darkMode ? pDark : pLight}`}>{children}</ul>,
             ol: ({ children }) => <ol className={`list-decimal ml-5 mb-8 text-lg text-justify ${darkMode ? pDark : pLight}`}>{children}</ol>,
             bold: ({ children }) => <b>{children}</b>,
             italic: ({ children }) => <em>{children}</em>,
