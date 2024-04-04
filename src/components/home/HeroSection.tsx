@@ -22,7 +22,7 @@ const HeroSection = () => {
           text-lg md:text-xl pt-2 border-l-4 border-orange-600 pl-4 mt-4
           ${darkMode ? "text-gray-200" : "text-gray-800"}
         `}>
-          I&apos;m  a front end developer specilized in create 3D user interfaces using Three.js and React.js
+          I&apos;m  a full stack developer specilized in create 3D user interfaces using Three.js and the MERN stack
         </h3>
       </div>
       <div className="w-full z-10 mt-[12rem] md:mt-0">
