@@ -45,7 +45,7 @@ const Jumbotron: FC = () => {
                 <h5 className={`
                   mb-2 text-2xl font-bold tracking-tight  
                   ${darkMode ? h5Dark : h5Light}
-                `}>Welcome!</h5>
+                `}>Bienvenido!</h5>
             </div>
             <p className={`
               mb-3 font-normal

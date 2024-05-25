@@ -47,14 +47,14 @@ const Navbar = () => {
         <Link href="/" className="flex items-center">
           <Image 
             src="/favicon.ico" 
-            className="h-55 w-55 mr-3" 
+            className="h-55 w-55 mr-3 pb-2" 
             alt="Flowbite Logo" 
-            width={50} 
-            height={50}
+            width={33} 
+            height={33}
           />
           <span className={`
             self-center 
-            text-3xl 
+            text-2xl 
             font-normal
             whitespace-nowrap
             text-orange-600
