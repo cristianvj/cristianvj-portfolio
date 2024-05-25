@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { Post } from '../../interfaces';
 import { useDarkContext } from '@/context/darkMode.context';
@@ -30,7 +30,8 @@ const PostDetail: FC<props> = ({post}) => {
             italic: ({ children }) => <em>{children}</em>,
             underline: ({ children }) => <u>{children}</u>,
             table: ({ children }) => <table className={`table-auto text-lg`}>{children}</table>,
-            code: ({ children }) => <code className={`italic text-sm p-1 bg-gray-200 px-3 py-0 rounded-none text-gray-800`}>{children}</code>
+            code: ({ children }) => <code className={`italic text-md p-2 bg-gray-200 rounded-none text-gray-800`}>{children}</code>,
+            code_block: ({ children }) => <pre className={`text-md p-2 bg-gray-200 px-3 rounded-none text-gray-800 w-[82vw] md:w-[70vw] lg:w-full overflow-x-auto`}><code>{children}</code></pre>,
           }}
         />}
     </div>

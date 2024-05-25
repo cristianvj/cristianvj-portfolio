@@ -27,7 +27,7 @@ const Jumbotron: FC = () => {
       }>
         <picture>
           <div className='z-10 bg-black/30 absolute p-3 mt-[1rem] ml-5 max-w-[360px] rounded-lg title-card-image'>
-            <p className='text-white text-left text-2xl md:text-4xl font-bold'>Welcome to my blog <span className="text-orange-600">Full Stack Dev</span></p>
+            <p className='text-white text-left text-2xl md:text-4xl font-bold'>Bienvenido a mi Blog <span className="text-orange-600">Full Stack Dev</span></p>
           </div>
           <Image
             unoptimized
@@ -51,16 +51,13 @@ const Jumbotron: FC = () => {
               mb-3 font-normal
               text-justify
               ${darkMode ? pDark : pLight}`}>
-              Here you&apos;ll find a treasure trove of knowledge and resources dedicated to web programming, 3D web interfaces, and all the subjects that have helped me prepare for interview questions and excel in the world of software development.
+              Aquí encontrará artículos dedicados a la programación web, las interfaces web 3D y todos los temas que me han ayudado a sobresalir en el mundo del desarrollo de software. Si es un desarrollador experimentado que busca trucos inteligentes y conocimientos de la industria o un principiante ansioso por sumergirse en el mundo del desarrollo web, este blog está aquí para guiarlo. Espere encuetre consejos útiles, técnicas de codificación y recursos recomendados que mejorarán sus habilidades y lo empoderarán en su viaje de programación. 
               <br/>
               <br/>
-              Whether you&apos;re a seasoned developer looking for clever tricks and industry insights or a beginner eager to dive into the world of web development, this blog is here to guide you. Expect to find helpful tips, coding techniques, and recommended resources that will sharpen your skills and empower you on your programming journey.
+              Entremos en el desarrollo de aplicaciones web fullstack principalmente usando el MERN stack, profundicemos en el ámbito de las interfaces web 3D y equípemos con el conocimiento para superar cualquier desafío que se nos presente. 
               <br/>
               <br/>
-              Join me as we explore the fascinating world of software development together. Let&apos;s unlock the secrets of web programming, delve into the realm of 3D web interfaces, and equip ourselves with the knowledge to conquer any interview challenge that comes our way.
-              <br/>
-              <br/>
-              Get ready to expand your programming prowess and embark on an exciting adventure of learning and growth. Stay tuned for regular updates and feel free to reach out with any questions or suggestions.
+              Prepárese para ampliar sus habilidades en programación y embarcarse en una emocionante aventura de aprendizaje y crecimiento. Manténgase atento a las actualizaciones periódicas y no dude en comunicarse con migo si tiene alguna pregunta o sugerencia. 
               <br/>
               <br/>
               Happy coding!
