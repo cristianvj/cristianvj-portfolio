@@ -50,13 +50,13 @@ const About = () => {
   `}>
     <div className="w-full md:w-[48%]">
       <motion.div variants={textVariant()}>
-        <h2 className="text-orange-600 font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">About me.</h2>
+        <h2 className="text-orange-600 font-black md:text-6xl sm:text-[50px] xs:text-[40px] text-[30px]">About me.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className={`
-          mt-4 text-lg md:text-xl max-w-3xl leading-[30px] border-l-4 border-orange-600 px-4
+          mt-10 text-2xl md:text-xl max-w-3xl leading-[30px] border-l-4 border-orange-600 px-4
           ${darkMode ? "text-gray-200" : "text-gray-800"}
         `}
       >
