@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+//import Link from 'next/link';
 import Image from 'next/image';
 
 import { Pacifico } from 'next/font/google';
@@ -13,6 +13,7 @@ import MenuPages from './MenuPages';
 import LoginButon from './LoginButon';
 
 import { useDarkContext } from '../../../context/darkMode.context';
+import { Link } from '@/navigation';
 
 const pacifico = Pacifico({
   weight: '400',
@@ -130,11 +131,11 @@ const Navbar = () => {
               setShowResponsiveMenu={setShowResponsiveMenu} 
               showResponsiveMenu={showResponsiveMenu}
             />
-            {/* <LanguageButton 
+            <LanguageButton 
               darkMode={darkMode} 
               showLanguages={showLanguages} 
               setShowLanguages={setShowLanguages} 
-            /> */}
+            />
             <DarkModeButton setShowResponsiveMenu={setShowResponsiveMenu} />
            {/*  <LoginButon logged={logged} darkMode={darkMode} /> */}
 
