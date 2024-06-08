@@ -1,6 +1,41 @@
 {
-  "Index": {
-    "title": "Hello world!",
-    "welcome": "Welcome to my portfolio"
+  "Home": {
+    "hello": "Hello, I'm Cristian",
+    "welcome": "Bienvenido a mi portafolio",
+    "shortDescription": "I'm a full stack developer specilized in create 3D user interfaces using Three.js and the MERN stack",
+    "aboutMeTitle": "About me.",
+    "aboutMeDescription": "I'm a skilled software developer with experience developing Full Stack interactive 3D web apps with JavaScript and TypeScript. I have experience working with frameworks like React, Next.js, Node.js, Express.js, Nest.js, Three.js, SQL and no SQL Databases, and among others \n I'm a quick learner and collaborate closely with international and remote teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. \n Let's work together to bring your ideas to life!",
+    "getInTouch": "Get in touch",
+    "contact": "Contact",	
+    "yourName": "Your Name",
+    "whatsYourName": "What's your name?",
+    "yourEmail": "Your Email",
+    "whatsYourEmail": "What's your email address?",
+    "yourMessage": "Your Message",
+    "tellMeMore": "What do you want to say?",
+    "send": "Send",
+    "sending": "Sending..."
+  },
+  "Blog": {
+    "welcomeBlog": "Welcome to my Blog Full Stack Dev",
+    "welcome": "Welcome",
+    "description": "Aquí encontrará artículos dedicados a la programación web, las interfaces web 3D y todos los temas que me han ayudado a sobresalir en el mundo del desarrollo de software. Si es un desarrollador experimentado que busca trucos inteligentes y conocimientos de la industria o un principiante ansioso por sumergirse en el mundo del desarrollo web, este blog está aquí para guiarlo. Espere encuetre consejos útiles, técnicas de codificación y recursos recomendados que mejorarán sus habilidades y lo empoderarán en su viaje de programación. \n Entremos en el desarrollo de aplicaciones web fullstack principalmente usando el MERN stack, profundicemos en el ámbito de las interfaces web 3D y equípemos con el conocimiento para superar cualquier desafío que se nos presente. \n Prepárese para ampliar sus habilidades en programación y embarcarse en una emocionante aventura de aprendizaje y crecimiento. Manténgase atento a las actualizaciones periódicas y no dude en comunicarse con migo si tiene alguna pregunta o sugerencia. \n Happy coding!",
+    "author": "About the author",
+    "authorDescription": "Software Engineer, I'm a full stack developer specilized in create 3D user interfaces using Three.js and the MERN stack. I have experience working with frameworks like React, Next.js, Node.js, Express.js, Nest.js, Three.js, SQL and no SQL Databases, and among",
+    "topics": "Topics",
+    "skills": "Skills",
+    "newPosts": "Find out when I write new posts",
+    "categories": "Categories",
+    "readMore": "Read more",
+    "comments": "Comments",
+    "comment": "Comment",
+    "leaveAComment": "Leave a comment",
+    "name": "Name",	
+    "email": "Email",
+    "commentSended": "Your comment has been sent to review, thank you!",
+    "commentSendedError": "There was an error sending your comment, please try again later",
+    "send": "Post Comment",
+    "userComments": "User Comments",
+    "saveInBrowser": "Save my name, email in this browser for the next time I comment."
   }
 }

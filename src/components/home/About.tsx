@@ -7,6 +7,7 @@ import Image from "next/image";
 import { grpahCMSImageLoader } from "../../utils/utils";
 import { useDarkContext } from '@/context/darkMode.context';
 import { services } from "./utils";
+import { useTranslations } from 'next-intl';
 
 interface Props {
   index: number;
@@ -41,6 +42,10 @@ const ServiceCard: FC<Props> = ({ index, title, icon }) => {
 
 const About = () => {
   const { darkMode } = useDarkContext() || {};
+  const t = useTranslations('Home');
+
+  const aboutMeDescription = t('aboutMeDescription').split('\n');
+
 
   return (
   <section className={`
@@ -50,24 +55,22 @@ const About = () => {
   `}>
     <div className="w-full md:w-[48%]">
       <motion.div variants={textVariant()}>
-        <h2 className="text-orange-600 font-black md:text-6xl sm:text-[50px] xs:text-[40px] text-[30px]">About me.</h2>
+        <h2 className="text-orange-600 font-black md:text-6xl sm:text-[50px] xs:text-[40px] text-[30px]">{t('aboutMeTitle')}</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className={`
-          mt-10 text-2xl md:text-xl max-w-3xl leading-[30px] border-l-4 border-orange-600 px-4
-          ${darkMode ? "text-gray-200" : "text-gray-800"}
-        `}
+        className={`text-2xl md:text-xl max-w-3xl mt-10 leading-[30px] border-l-4 border-orange-600 px-4
+          ${darkMode ? "text-gray-200" : "text-gray-800"}`}
       >
-        I&apos;m a skilled software developer with experience developing Full Stack interactive 3D web apps with JavaScript and TypeScript. <br/> <br/>
-
-        I have experience working with frameworks like React, Next.js, Node.js, Express.js, Nest.js, Three.js, SQL and no SQL Databases, and among others <br/> <br/> 
-    
-        I&apos;m a quick learner and collaborate closely with international and remote teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. <br/> <br/>
-
-        Let&apos;s work together to bring your ideas to life!
-        
+        {aboutMeDescription.map((paragraph, index) => (
+          <span className={` text-2xl md:text-xl
+          ${darkMode ? "text-gray-200" : "text-gray-800"}`} key={index}>
+            {paragraph}
+            <br />
+            <br />
+          </span>
+        ))}
       </motion.p>
     </div>
 
