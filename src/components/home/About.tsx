@@ -1,8 +1,8 @@
 'use client';
 
+import { FC, useMemo } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../utils/motion";
-import { FC } from "react";
 import Image from "next/image";
 import { grpahCMSImageLoader } from "../../utils/utils";
 import { useDarkContext } from '@/context/darkMode.context';
@@ -44,7 +44,7 @@ const About = () => {
   const { darkMode } = useDarkContext() || {};
   const t = useTranslations('Home');
 
-  const aboutMeDescription = t('aboutMeDescription').split('\n');
+  const aboutMeDescription = useMemo(() => t('aboutMeDescription').split('\n'), [t]);
 
 
   return (

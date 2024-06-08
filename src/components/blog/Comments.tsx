@@ -7,6 +7,7 @@ import { useDarkContext } from '@/context/darkMode.context';
 
 import { getComments } from '../../services';
 import { classes } from '@/utils/consts';
+import { useTranslations } from 'next-intl';
 
 interface props {
   slug: string;
@@ -21,6 +22,7 @@ interface comments {
 const Comments: FC<props> = ({ slug }) => {
   const { darkMode } = useDarkContext() || {};
   const { bgLightMode, bgDarkMode, h5Dark, h5Light, spanDark, spanLight } = classes.blog;
+  const t = useTranslations('Blog');
 
   const [comments, setComments] = useState<comments[]>([]);
 
@@ -44,7 +46,7 @@ const Comments: FC<props> = ({ slug }) => {
           
         `}>
           <h3 className={`text-xl mb-8 pb-4 font-semibold border-b ${darkMode ? h5Dark : h5Light}`}>
-            Comentarios de los usuarios
+            {t('userComments')}
           </h3>
             {comments.map((comment, index) => (
               <div key={index} className={`

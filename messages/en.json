@@ -25,7 +25,9 @@
     "topics": "Topics",
     "skills": "Skills",
     "newPosts": "Find out when I write new posts",
+    "noSpam": "Leave me your email, zero spam",
     "categories": "Categories",
+    "suscribe": "Suscribirse",
     "readMore": "Read more",
     "comments": "Comments",
     "comment": "Comment",
@@ -36,6 +38,7 @@
     "commentSendedError": "There was an error sending your comment, please try again later",
     "send": "Post Comment",
     "userComments": "User Comments",
-    "saveInBrowser": "Save my name, email in this browser for the next time I comment."
+    "saveInBrowser": "Save my name, email in this browser for the next time I comment.",
+    "mandatoryFields": "All fields are mandatory"
   }
 }

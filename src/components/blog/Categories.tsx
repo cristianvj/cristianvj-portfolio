@@ -7,6 +7,7 @@ import { getCategories } from '../../services';
 
 import { useDarkContext } from '@/context/darkMode.context';
 import { classes } from '@/utils/consts';
+import { useTranslations } from 'next-intl';
 
 type Category = {
   name: string;
@@ -16,6 +17,7 @@ type Category = {
 const Categories: FC = () => {
   const { darkMode } = useDarkContext() || {};
   const { bgLightMode, bgDarkMode, h5Dark, h5Light } = classes.blog;
+  const t = useTranslations('Blog');
 
   const [categories, setCategories] = useState <Category[]> ([]);
 
@@ -27,7 +29,7 @@ const Categories: FC = () => {
   return (
     <div className={`w-full p-5 rounded-lg  ${darkMode ? bgDarkMode : bgLightMode}`}>
       <h3 className={`text-xl mb-4 font-semibold border-b pb-4 ${darkMode ? h5Dark : h5Light}`}>
-          Categories
+          {t('categories')}
       </h3>
       <div className="flex flex-wrap gap-2">
         {

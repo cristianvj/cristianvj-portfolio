@@ -6,6 +6,7 @@ import { useDarkContext } from '@/context/darkMode.context';
 
 import { submitComment } from '../../services';
 import { classes } from '@/utils/consts';
+import { useTranslations } from 'next-intl';
 
 interface props {
   slug: string;
@@ -20,6 +21,7 @@ interface typesFormData {
 
 const CommentsForm: FC<props> = ({ slug }) => {
   const { darkMode } = useDarkContext() || {};
+  const t = useTranslations('Blog');
 
   const { bgLightMode, bgDarkMode, h5Dark, h5Light } = classes.blog;
 
@@ -108,7 +110,7 @@ const CommentsForm: FC<props> = ({ slug }) => {
       my-8
       ${darkMode ? bgDarkMode : bgLightMode}
     `}>
-      <h3 className={`text-xl mb-8 font-semibold border-b pb-4 ${darkMode ? h5Dark : h5Light}`}>Escribe un comentario</h3>
+      <h3 className={`text-xl mb-8 font-semibold border-b pb-4 ${darkMode ? h5Dark : h5Light}`}>{t('leaveAComment')}</h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea 
           value={formData.comment} 
@@ -131,7 +133,7 @@ const CommentsForm: FC<props> = ({ slug }) => {
             `}
           `} 
           name="comment" 
-          placeholder="Comment"
+          placeholder={t('comment')}
         />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
@@ -139,22 +141,11 @@ const CommentsForm: FC<props> = ({ slug }) => {
           type="text" 
           value={formData.name} 
           onChange={onInputChange} 
-          className={`
-            py-2 px-4 
-            outline-none 
-            w-full 
-            rounded-lg 
-            focus:ring-2 
-            ${darkMode ? `
-            text-slate-200
-              bg-slate-600
-              focus:ring-slate-200
-            ` : `
-              bg-slate-200
-              focus:ring-slate-400
-            `}
+          className={`py-2 px-4 outline-none w-full rounded-lg focus:ring-2 
+            ${darkMode ? ` text-slate-200 bg-slate-600 focus:ring-slate-200 ` 
+            : `bg-slate-200 focus:ring-slate-400`}
           `} 
-          placeholder="Name" 
+          placeholder={t('name')} 
           name="name" />
         <input 
           type="email" 
@@ -176,19 +167,19 @@ const CommentsForm: FC<props> = ({ slug }) => {
             `}
           `} 
           placeholder="Email" 
-          name="email" 
+          name={t('email')} 
         />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <div>
           <input checked={formData.storeData} onChange={onInputChange} type="checkbox" id="storeData" name="storeData" value="true" />
-          <label className="text-slate-500 cursor-pointer" htmlFor="storeData"> Save my name, email in this browser for the next time I comment.</label>
+          <label className="text-slate-500 cursor-pointer ml-2" htmlFor="storeData">{t('saveInBrowser')}</label>
         </div>
       </div>
-      {error && <p className="text-xs text-red-500">All fields are mandatory</p>}
+      {error && <p className="text-xs text-red-500">{t('mandatoryFields')}</p>}
       <div className="mt-8">
-        <button type="button" onClick={handleCommentSubmission} className="transition duration-500 ease hover:bg-orange-800 inline-block bg-orange-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Post Comment</button>
-        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submitted for review</span>}
+        <button type="button" onClick={handleCommentSubmission} className="transition duration-500 ease hover:bg-orange-800 inline-block bg-orange-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">{t('send')}</button>
+        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">{t('commentSended')}</span>}
       </div>
     </div>
   );

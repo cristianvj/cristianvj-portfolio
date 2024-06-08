@@ -15,7 +15,7 @@ export const pathnames = {
   '/blog': '/blog',
  
   // Dynamic params are supported via square brackets
-  '/news/[articleSlug]': {
+  '/blog/[articleSlug]': {
     en: '/blog/[articleSlug]',
     es: '/blog/[articleSlug]'
   },
